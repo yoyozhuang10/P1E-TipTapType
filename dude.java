@@ -14,6 +14,31 @@ public class dude extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if(Greenfoot.isKeyDown("w"))
+        {
+            askInput();
+        }
+    }
+    public void askInput()
+    {
+        boolean correct = true;
+        String answer = Greenfoot.ask("Type 'Yes': ");
+        String reply = " ";
+        if(!answer.equals("Yes"))
+        {
+            correct = false;
+        }
+        
+        if(correct == false)
+        {
+            reply = "wrong";
+        }
+        else
+        {
+            reply = "right";
+        }
+        
+        System.out.println(answer + " is " + reply + "!");
+        
     }
 }
