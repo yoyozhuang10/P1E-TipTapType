@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class dude extends Actor
+public class Dude extends Actor
 {
     /**
      * Act - do whatever the dude wants to do. This method is called whenever
@@ -15,5 +15,11 @@ public class dude extends Actor
     public void act()
     {
         // Add your action code here.
+        String s = Greenfoot.ask("HELLO?");
+        if(s.equals("LOL")){
+            System.out.println("YAY");
+        } else {
+            System.out.println("---");
+        }
     }
 }
