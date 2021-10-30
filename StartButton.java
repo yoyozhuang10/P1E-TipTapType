@@ -19,7 +19,7 @@ public class StartButton extends Actor
         {
             try
             {
-                World MyWorld = new MyWorld();
+                World MyWorld = new DisplayWords();
                 Greenfoot.setWorld(MyWorld);
             }
             catch (Exception e)

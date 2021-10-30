@@ -6,20 +6,20 @@ import greenfoot.GreenfootImage;
 /**
  * World where user begins typing.
  * 
- * @author Carl Wang
+ * @author Carl
  * @version 2021.10.29
  */
-public class MyWorld extends World
+public class DisplayWords extends World
 {
-    ArrayList<String> wordList = new ArrayList<String>();
-    Label text;
-    boolean kDown;
+    ArrayList<String> wordList = new ArrayList<String>(); // Stores words from words.txt
+    Label text; // Displays the word from ArrayList
+    boolean kDown; // Boolean to prevent isKeyDown() from running multiple times
     
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public MyWorld() throws InterruptedException
+    public DisplayWords() throws InterruptedException
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
@@ -29,13 +29,13 @@ public class MyWorld extends World
     
     public void act()
     {
-        // To run once after being x key pressed down once
+        // To run once after being "x" key pressed down once
         if (kDown != Greenfoot.isKeyDown("k"))
         {
             kDown = !kDown;
             if (kDown)
             {
-                if (numberOfObjects() == 0) // Empty world
+                if (numberOfObjects() == 0) // Empty world, there is no label
                 {
                     text = new Label(wordList.get(rand()), 75);
                     addObject(text, getWidth()/2, getHeight()/2);
@@ -70,10 +70,15 @@ public class MyWorld extends World
         }
         catch (FileNotFoundException e)
         {
-            System.out.println("Something went wrong, MyWorld.java");
+            System.out.println("Something went wrong, MyWorld.java, file reading");
         }
     }
     
+    /**
+     * Generates a random number between 0 -> ArrayList size. 
+     * To be only used with wordList
+     * 
+     */
     public int rand()
     {
         return Greenfoot.getRandomNumber(wordList.size());

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Typing
+comment0.text=\r\n\ World\ that\ simulates\ the\ typing\ experience\r\n\ \r\n\ @author\ Carl\r\n\ @version\ 2021.10.30\r\n
+comment1.params=
+comment1.target=Typing()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tester.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=s
+comment3.target=void\ showTyped(java.lang.String)
+comment3.text=\r\n\ Base\ of\ operations\ for\ displaying\ typed\ text\ on\ stage\r\n\ \r\n
+comment4.params=stack
+comment4.target=java.lang.String\ createString(Stack)
+comment4.text=\r\n\ Creates\ the\ string\ by\ gathering\ the\ data\ stored\ in\ stack\r\n\ \r\n
+comment5.params=s
+comment5.target=void\ print(java.lang.String)
+comment5.text=\r\n\ Debugging\ purposes\r\n\ \r\n
+numComments=6
