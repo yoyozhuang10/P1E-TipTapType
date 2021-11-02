@@ -26,5 +26,8 @@ public class EndScreen extends World
         
         Label highScore = new Label("High score: " + "6", 40);
         addObject(highScore, getWidth() / 2, getHeight() / 2 + 50);
+        
+        StartButton sb = new StartButton();
+        addObject(sb, getWidth() / 2, getHeight() / 2 + 100);
     }
 }

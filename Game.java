@@ -16,7 +16,7 @@ public class Game extends World
     Label score; //Displays score of words
     
     //Timer variables
-    int totalTime = 30;
+    int totalTime = 5;
     SimpleTimer t = new SimpleTimer();
     Counter c = new Counter();
     
@@ -189,7 +189,8 @@ public class Game extends World
         c.setValue(totalTime - (t.millisElapsed()/1000));
         //End game when timer reaches 0
         if(c.getValue()<= 0){
-            
+            EndScreen es = new EndScreen();
+            Greenfoot.setWorld(es);
         }
         
         // To run once after being "x" key pressed down once
