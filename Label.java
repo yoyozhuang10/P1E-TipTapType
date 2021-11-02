@@ -30,6 +30,15 @@ public class Label extends Actor
     }
     
     /**
+     * Returns the text label
+     * 
+     */
+    public String getText()
+    {
+        return value;
+    }
+    
+    /**
      * Create a new label, initialise it with the needed text and the font size 
      */
     public Label(String value, int fontSize)
@@ -87,7 +96,7 @@ public class Label extends Actor
     /**
      * Update the image on screen to show the current value.
      */
-    private void updateImage()
+    public void updateImage()
     {
         setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
     }
