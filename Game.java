@@ -16,6 +16,7 @@ public class Game extends World
     
     //Score variables
     public static int score;
+    public static int highScore = 0;
     Label currentScore;
     
     //Timer variables
@@ -222,6 +223,18 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
+     * Calculates the high score
+     */
+    public static void calculateHighScore(){
+        if (score > highScore)
+        {
+            highScore = score;
+        }
+    }
+    
+    /**
      * @author Carl, Yoyo
      * 
      * What will loop on game run
@@ -233,6 +246,7 @@ public class Game extends World
         c.setValue(totalTime - (t.millisElapsed()/1000));
         //End game when timer reaches 0
         if(c.getValue()<= 0){
+            calculateHighScore();
             EndScreen es = new EndScreen();
             Greenfoot.setWorld(es);
         }
