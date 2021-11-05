@@ -13,10 +13,13 @@ public class Game extends World
 {
     ArrayList<String> wordList = new ArrayList<String>(); // Stores words from words.txt
     Label text; // Displays the word from ArrayList
-    Label score; //Displays score of words
+    
+    //Score variables
+    int score = 0;
+    Label currentScore;
     
     //Timer variables
-    int totalTime = 5;
+    int totalTime = 10;
     SimpleTimer t = new SimpleTimer();
     Counter c = new Counter();
     
@@ -35,9 +38,14 @@ public class Game extends World
         super(600, 400, 1); 
         extractWords(); // Gets the words from txt and stores in ArrayList
         displayWord();
+        
         //Create a timer and start it
         addObject(c, 100, 100);
         t.mark();
+        
+        //Create a score label
+        currentScore = new Label(score, 30);
+        addObject(currentScore, 500, 100);
     }
     
     /**
@@ -112,8 +120,16 @@ public class Game extends World
         }
         else if (s.equals("space"))
         {
-            s = " ";
-            typed.push(s);
+            //Piece together word that the player typed
+            String fullWord = "";
+            for(String ss : typed){
+                fullWord = ss + fullWord;
+            }
+            
+            //Add to score if the typed word is correct
+            if(word.contains(fullWord)){
+                score++;
+            }
         }
         else if // Ignore following undesired inputs
         (
@@ -131,6 +147,7 @@ public class Game extends World
             typed.push(s);
         }
         
+
         if (numberOfObjects() == 0) // Empty world, there is no label
         {
             String typedString = createString(typed);
@@ -192,6 +209,9 @@ public class Game extends World
             EndScreen es = new EndScreen();
             Greenfoot.setWorld(es);
         }
+        
+        //Update score
+        currentScore.setValue(score);
         
         // To run once after being "x" key pressed down once
         if (kDown != Greenfoot.isKeyDown("space") || kDown != Greenfoot.isKeyDown("enter"))
