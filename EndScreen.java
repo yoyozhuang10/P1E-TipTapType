@@ -17,11 +17,12 @@ public class EndScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        Game g = new Game();
         
         Label end = new Label("Game Over", 60);
         addObject(end, getWidth() / 2, getHeight() / 2 - 50);
         
-        Label score = new Label("Score: " + "4", 40);
+        Label score = new Label("Score: " + g.getScore(), 40);
         addObject(score, getWidth() / 2, getHeight() / 2);
         
         Label highScore = new Label("High score: " + "6", 40);

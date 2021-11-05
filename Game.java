@@ -15,7 +15,7 @@ public class Game extends World
     Label text; // Displays the word from ArrayList
     
     //Score variables
-    int score = 0;
+    int score;
     Label currentScore;
     
     //Timer variables
@@ -195,7 +195,10 @@ public class Game extends World
             addObject(text, getWidth()/2, 100);
         }
     }
-    
+
+    public int getScore(){
+        return score;
+    }
     /**
      * What will loop on game run
      * 
