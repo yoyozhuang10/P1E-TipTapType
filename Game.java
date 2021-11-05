@@ -6,7 +6,7 @@ import java.util.Scanner; // File reading
 /**
  * Write a description of class Game here.
  * 
- * @author Carl
+ * @author Carl, Yoyo
  * @version 2021.11.01
  */
 public class Game extends World
@@ -15,7 +15,7 @@ public class Game extends World
     Label text; // Displays the word from ArrayList
     
     //Score variables
-    int score;
+    public static int score;
     Label currentScore;
     
     //Timer variables
@@ -29,6 +29,8 @@ public class Game extends World
     String word; // The word the user has to type, from words.txt
     
     /**
+     * @author Carl, Yoyo
+     * 
      * Constructor for objects of class Game.
      * 
      */
@@ -49,6 +51,8 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
      * Generates a random number between 0 -> ArrayList size. 
      * To be only used with wordList
      * 
@@ -59,6 +63,8 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
      * Reads word.txt and stores data into a data structure (ArrayList)
      * 
      */
@@ -83,6 +89,8 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
      * Creates the string by gathering the data stored in stack
      * 
      */
@@ -102,6 +110,8 @@ public class Game extends World
     }
     
     /**
+     * @author Carl, Yoyo
+     * 
      * Base of operations for displaying typed text on stage
      * 
      */
@@ -164,6 +174,8 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
      * Clears what user typed
      * 
      */
@@ -176,6 +188,8 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
      * Displays the word the user will type
      * 
      */
@@ -196,10 +210,20 @@ public class Game extends World
         }
     }
 
-    public int getScore(){
-        return score;
-    }
     /**
+     * @author Yoyo, Carl
+     * 
+     * Returns the user's score
+     */
+    public static int getScore(){
+        int output = score;
+        score = 0; // Resets score
+        return output;
+    }
+    
+    /**
+     * @author Carl, Yoyo
+     * 
      * What will loop on game run
      * 
      */
@@ -236,7 +260,5 @@ public class Game extends World
             }
         }
         catch (Exception NullPointerException){} // Error shoudln't happen...
-        
-        //if escape pressed, end game
     }
 }

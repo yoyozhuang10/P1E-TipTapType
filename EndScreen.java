@@ -22,7 +22,7 @@ public class EndScreen extends World
         Label end = new Label("Game Over", 60);
         addObject(end, getWidth() / 2, getHeight() / 2 - 50);
         
-        Label score = new Label("Score: " + g.getScore(), 40);
+        Label score = new Label("Score: " + Game.getScore(), 40);
         addObject(score, getWidth() / 2, getHeight() / 2);
         
         Label highScore = new Label("High score: " + "6", 40);
