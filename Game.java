@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class Game extends World
 {
+    // Essential Variables
     public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores words from words.txt
     Label displayedWord = new Label ("", 75); // Label that will display the word the user has to type
     Label typedWord = new Label ("", 75); // Label that displays what the user has typed
@@ -16,6 +17,16 @@ public class Game extends World
     // Variables that contain "centre data"
     int x = getWidth()/2; 
     int y = getHeight()/2;
+
+    // Timer variables
+    int totalTime = 10;
+    SimpleTimer t = new SimpleTimer();
+    Counter c = new Counter();
+
+    // Score Variables
+    public static int score;
+    public static int highScore;
+    public static Label currentScore;
     
     /**
      * Constructor for objects of class Game.
@@ -28,12 +39,22 @@ public class Game extends World
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
         displayWord();
-        //createTimer
-        //createScoreLabel
+        
+        // Create a timer and start it
+        addObject(c, 100, 100);
+        t.mark();
+
+        // Create a score label
+        currentScore = new Label(score, 30);
+        addObject(currentScore, 500, 100);
     }
 
+    /**
+     * @author Carl, Yoyo
+     */
     public void act()
     {
+        updateTimer();
         // Allow the user to type
         try
         {
@@ -50,11 +71,18 @@ public class Game extends World
         if (checkCorrect(displayedWord.getValue(), typedWord.getValue()))
         {
             // User has typed correct word
-            //Increase score
+            updateScore();
             displayWord();
             Typing.clearTyped();
             showTyped(Typing.getTyped());
         }  
+
+        // End game if timer reaches 0
+        if (c.getValue() <= 0){
+            Score.calculateHighScore();
+            EndScreen es = new EndScreen();
+            Greenfoot.setWorld(es);
+        }
     }
 
     /**
@@ -108,5 +136,26 @@ public class Game extends World
     public void showTyped(String item)
     {
         typedWord.setValue(item);
+    }
+
+    /**
+     * @author - Yoyo
+     * 
+     * Update timer value on screen
+     */
+    public void updateTimer()
+    {
+        c.setValue(totalTime - (t.millisElapsed()/1000));
+    }
+
+    /**
+     * @author Yoyo
+     * 
+     * Update score label and increases score by 1
+     */
+    public static void updateScore()
+    {
+        score++;
+        currentScore.setValue(score);
     }
 }
