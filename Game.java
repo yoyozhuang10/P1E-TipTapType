@@ -33,20 +33,20 @@ public class Game extends World
      * @author Carl, Yoyo
      * 
      * Constructor for objects of class Game.
-     * 
+     * Run when the game starts
      */
     public Game()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         extractWords(); // Gets the words from txt and stores in ArrayList
-        displayWord();
+        displayWord(); // Displays first word for the user to see
         
-        //Create a timer and start it
+        // Create a timer and start it
         addObject(c, 100, 100);
         t.mark();
         
-        //Create a score label
+        // Create a score label
         currentScore = new Label(score, 30);
         addObject(currentScore, 500, 100);
     }
@@ -56,7 +56,6 @@ public class Game extends World
      * 
      * Generates a random number between 0 -> ArrayList size. 
      * To be only used with wordList
-     * 
      */
     public int rand()
     {
@@ -67,7 +66,6 @@ public class Game extends World
      * @author Carl
      * 
      * Reads word.txt and stores data into a data structure (ArrayList)
-     * 
      */
     public void extractWords()
     {
@@ -92,14 +90,13 @@ public class Game extends World
     /**
      * @author Carl
      * 
-     * Creates the string by gathering the data stored in stack
-     * 
+     * Creates the string (what user typed) by gathering/reversing the data stored in stack
      */
     public String createString(Stack<String> stack)
     {
         String output = "";
         Stack<String> methodStack = new Stack<String>();
-        for (String s: stack)
+        for (String s : stack)
         {
             methodStack.push(s);
         }
@@ -111,14 +108,72 @@ public class Game extends World
     }
     
     /**
+     * @author Carl
+     * 
+     * Clears what user typed
+     */
+    public void clearTyped()
+    {
+        while(!typed.isEmpty())
+        {
+            typed.pop();
+        }
+    }
+    
+    /**
+     * @author Carl
+     * 
+     * Displays the word the user will type
+     */
+    public void displayWord()
+    {
+        if (numberOfObjects() == 0) // Empty world, there is no label
+        {
+            word = wordList.get(rand());
+            text = new Label(word, 75);
+            addObject(text, getWidth()/2, 100);
+        }  
+        else // Remove existing text to replace
+        {
+            removeObject(text);
+            word = wordList.get(rand());
+            text = new Label(word, 75);
+            addObject(text, getWidth()/2, 100);
+        }
+    }
+
+    /**
+     * @author Yoyo, Carl
+     * 
+     * Returns the user's score
+     */
+    public static int getScore(){
+        int output = score;
+        score = 0; // Resets score
+        return output;
+    }
+    
+    /**
+     * @author Carl
+     * 
+     * Calculates the high score
+     */
+    public static void calculateHighScore()
+    {
+        if (score > highScore)
+        {
+            highScore = score;
+        }
+    }
+    
+    /**
      * @author Carl, Yoyo
      * 
      * Base of operations for displaying typed text on stage
-     * 
      */
     public void showTyped(String s)
     {
-        if (s.equals("backspace")) // Clears last character on string
+        if (s.equals("backspace")) // Clears last character on string or wipe the string
         {
             if (Greenfoot.isKeyDown("control")) // Emulating Ctrl + backspace
             {
@@ -175,70 +230,9 @@ public class Game extends World
     }
     
     /**
-     * @author Carl
-     * 
-     * Clears what user typed
-     * 
-     */
-    public void clearTyped()
-    {
-        while(!typed.isEmpty())
-        {
-            typed.pop();
-        }
-    }
-    
-    /**
-     * @author Carl
-     * 
-     * Displays the word the user will type
-     * 
-     */
-    public void displayWord()
-    {
-        if (numberOfObjects() == 0) // Empty world, there is no label
-        {
-            word = wordList.get(rand());
-            text = new Label(word, 75);
-            addObject(text, getWidth()/2, 100);
-        }  
-        else // Remove existing text to replace
-        {
-            removeObject(text);
-            word = wordList.get(rand());
-            text = new Label(word, 75);
-            addObject(text, getWidth()/2, 100);
-        }
-    }
-
-    /**
-     * @author Yoyo, Carl
-     * 
-     * Returns the user's score
-     */
-    public static int getScore(){
-        int output = score;
-        score = 0; // Resets score
-        return output;
-    }
-    
-    /**
-     * @author Carl
-     * 
-     * Calculates the high score
-     */
-    public static void calculateHighScore(){
-        if (score > highScore)
-        {
-            highScore = score;
-        }
-    }
-    
-    /**
      * @author Carl, Yoyo
      * 
      * What will loop on game run
-     * 
      */
     public void act()
     {
