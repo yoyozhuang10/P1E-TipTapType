@@ -13,22 +13,42 @@ public class Background extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     //GreenfootSound menuMusic = new GreenfootSound("music.mp3");
-    GreenfootImage[] background = new GreenfootImage[191];
+    GreenfootImage[] background = new GreenfootImage[193];
+    SimpleTimer animation = new SimpleTimer();
+    int imageIndex = 1;
+    boolean started = false;
+    
+    
     
     public Background()
     {
-        for(int i = 0; i < 191; i++)
-        {
-            background[i] = new GreenfootImage("mainmenu" + i + ".gif");
-        }
-        setImage(background[191]); 
+            for(int i = 0; i < 193; i++)
+            {
+                background[i] = new GreenfootImage("main (" + (i + 1) + ").png");
+            }
+            setImage(background[0]); 
+            
+            animation.mark();
+            
+            
+            
+
     }
     
-    int imageIndex = 0;
     public void animateBackground()
     {
+        
+        if(animation.millisElapsed() < 50)
+        {
+            return;
+        }
+        animation.mark();
+        
         setImage(background[imageIndex]);
-        imageIndex = imageIndex + 1 % background.length;
+                
+        imageIndex = (imageIndex + 1) % background.length;
+        
+        
     }
     
     public void act()

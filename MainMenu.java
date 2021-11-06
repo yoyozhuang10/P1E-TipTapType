@@ -13,9 +13,24 @@ public class MainMenu extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    Background mainmenu = new Background();
+    SimpleTimer menuTimer = new SimpleTimer();
+    
     public MainMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
+        
+        menuTimer.mark();
+        
+        addObject(mainmenu, 400, 225);
+        
+        
+        if(menuTimer.millisElapsed() < 5000)
+        {
+            removeObject(mainmenu);
+        }
+        
+
     }
 }
