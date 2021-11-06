@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * in Greenfoot.  If you keep a reference to the Label then you can change the text it
  * displays.  
  *
- * @author Amjad Altadmri 
+ * @author Amjad Altadmri, Carl
  * @version 1.1
  */
 public class Label extends Actor
@@ -30,15 +30,6 @@ public class Label extends Actor
     }
     
     /**
-     * Returns the text label
-     * 
-     */
-    public String getText()
-    {
-        return value;
-    }
-    
-    /**
      * Create a new label, initialise it with the needed text and the font size 
      */
     public Label(String value, int fontSize)
@@ -46,6 +37,16 @@ public class Label extends Actor
         this.value = value;
         this.fontSize = fontSize;
         updateImage();
+    }
+
+    /**
+     * @author - Carl
+     * 
+     * Gets the current value
+     */
+    public String getValue()
+    {
+        return value;
     }
 
     /**
@@ -96,7 +97,7 @@ public class Label extends Actor
     /**
      * Update the image on screen to show the current value.
      */
-    public void updateImage()
+    private void updateImage()
     {
         setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
     }

@@ -1,58 +1,41 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * World that simulates the typing experience
+ * Write a description of class Typing here.
  * 
- * @author Carl
- * @version 2021.10.30
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Typing extends World
+public class Typing  
 {
-    Label displayTyped;
-    Stack<String> typed = new Stack<String>();
-    
-    /**
-     * Constructor for objects of class Tester.
-     * 
-     */
-    public Typing()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
-    }
-    
-    public void act()
-    {
-        String keyPress = Greenfoot.getKey();
-        try // Prevents NullPointerException from occuring
-        {
-            if (!keyPress.equals(null)) // Key on keyboard has been pressed
-            {
-                showTyped(keyPress);
-            }
-        }
-        catch (Exception NullPointerException){}
-    }
+    // instance variables - replace the example below with your own
+    private static Stack<String> typed = new Stack<String>();
 
     /**
-     * Base of operations for displaying typed text on stage
+     * @author Carl
      * 
+     * Clears what user typed
      */
-    public void showTyped(String s)
+    public static void clearTyped()
     {
-        if (s.equals("space")) // Prevents the literal word "space" from showing up
+        while(!typed.isEmpty())
         {
-            s = " ";
-            typed.push(s);
+            typed.pop();
         }
-        else if (s.equals("backspace")) // Clears last character on string
+    }
+    
+    /**
+     * @author Carl, Yoyo
+     * 
+     * Base of operations for displaying typed text on stage
+     */
+    public static String type(String s)
+    {
+        if (s.equals("backspace")) // Clears last character on string or wipe the string
         {
             if (Greenfoot.isKeyDown("control")) // Emulating Ctrl + backspace
             {
-                while(!typed.isEmpty())
-                {
-                    typed.pop();
-                }
+                clearTyped();
             }
             else 
             {
@@ -64,7 +47,8 @@ public class Typing extends World
             s.equals("enter") || s.equals("control") ||
             s.equals("shift") || s.equals("caps lock") ||
             s.equals("tab") || s.equals("alt") ||
-            s.equals("alt graph") || s.equals("windows")
+            s.equals("alt graph") || s.equals("windows") ||
+            s.equals("escape") || s.equals("space")
         )
         {
             // Do nothing
@@ -74,32 +58,20 @@ public class Typing extends World
             typed.push(s);
         }
         
-        if (numberOfObjects() == 0) // Empty world, there is no label
-        {
-            print("string: " + s);
-            String typedString = createString(typed);
-            displayTyped = new Label(typedString, 75);
-            addObject(displayTyped, getWidth()/2, getHeight()/2);
-        }  
-        else // Remove existing text to replace
-        {
-            print("string: " + s);
-            String typedString = createString(typed);
-            removeObject(displayTyped);
-            displayTyped = new Label(typedString, 75);
-            addObject(displayTyped, getWidth()/2, getHeight()/2);
-        }
+
+        return createString(typed);
     }
-    
+        
     /**
-     * Creates the string by gathering the data stored in stack
+     * @author Carl
      * 
+     * Creates the string (what user typed) by gathering/reversing the data stored in stack
      */
-    public String createString(Stack<String> stack)
+    public static String createString(Stack<String> stack)
     {
         String output = "";
         Stack<String> methodStack = new Stack<String>();
-        for (String s: stack)
+        for (String s : stack)
         {
             methodStack.push(s);
         }
@@ -111,11 +83,12 @@ public class Typing extends World
     }
     
     /**
-     * Debugging purposes
+     * @author - Carl
      * 
+     * Method returns what the user currently typed
      */
-    public void print(String s)
+    public static String getTyped()
     {
-        System.out.println(s);
+        return createString(typed);
     }
 }
