@@ -6,19 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Play extends Actor
+public class Quit extends Actor
 {
     /**
      * Act - do whatever the Play wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootImage idle = new GreenfootImage("play_idle.png");
-    GreenfootImage clicked = new GreenfootImage("play_clicked.png");
+    GreenfootImage idle = new GreenfootImage("quit_idle.png");
+    GreenfootImage clicked = new GreenfootImage("quit_clicked.png");
     private int buttonWidth = 200;
     private int buttonHeight = 60;
     
-    public Play()
+    public Quit()
     {
         idle.scale(buttonWidth, buttonHeight);
         clicked.scale(buttonWidth, buttonHeight);
@@ -30,15 +30,15 @@ public class Play extends Actor
 
         if(Greenfoot.mousePressed(this))
         {
-            this.setLocation(250, 302);
+            this.setLocation(550, 302);
             setImage(clicked);
             Greenfoot.delay(2);
-            Greenfoot.setWorld(new TypingWorld());
+
         }
         else
         {
             setImage(idle);
-            this.setLocation(250, 300);
+            this.setLocation(550, 300);
         }
     }
     

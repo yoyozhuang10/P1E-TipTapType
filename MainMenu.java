@@ -15,22 +15,37 @@ public class MainMenu extends World
      */
     Background mainmenu = new Background();
     SimpleTimer menuTimer = new SimpleTimer();
-    
+
     public MainMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
-        
+
         menuTimer.mark();
-        
+
         addObject(mainmenu, 400, 225);
-        
-        
+
         if(menuTimer.millisElapsed() < 5000)
         {
             removeObject(mainmenu);
         }
-        
 
+        prepare();
+    }
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Play play = new Play();
+        addObject(play,250,300);
+        
+        Quit quit = new Quit();
+        addObject(quit,550,300);
+        
+        Title title = new Title();
+        addObject(title, 400, 150);
+        
     }
 }
