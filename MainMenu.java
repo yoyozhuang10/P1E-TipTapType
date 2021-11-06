@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends World
 {
+    // Variables that contain "centre data"
     int x = getWidth()/2;
     int y = getHeight()/2;
     
@@ -26,7 +27,7 @@ public class MainMenu extends World
     public void act()
     {
         String keyPress = Greenfoot.getKey();
-        if ("space".equals(keyPress))
+        if ("space".equals(keyPress)) // If user presses space, start the game
         {
             Game g = new Game();
             Greenfoot.setWorld(g);

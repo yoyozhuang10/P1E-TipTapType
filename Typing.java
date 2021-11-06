@@ -3,13 +3,12 @@ import greenfoot.*;
 /**
  * Write a description of class Typing here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Carl
+ * @version 2021.11.05
  */
 public class Typing  
 {
-    // instance variables - replace the example below with your own
-    private static Stack<String> typed = new Stack<String>();
+    private static Stack<String> typed = new Stack<String>(); // Stack contains what user typed
 
     /**
      * @author Carl
@@ -25,13 +24,13 @@ public class Typing
     }
     
     /**
-     * @author Carl, Yoyo
+     * @author Carl
      * 
      * Base of operations for displaying typed text on stage
      */
     public static String type(String s)
     {
-        if (s.equals("backspace")) // Clears last character on string or wipe the string
+        if (s.equals("backspace")) // User choosing to delete something
         {
             if (Greenfoot.isKeyDown("control")) // Emulating Ctrl + backspace
             {
@@ -39,7 +38,7 @@ public class Typing
             }
             else 
             {
-                typed.pop();
+                typed.pop(); // Emulating single backspace press
             }
         }
         else if // Ignore following undesired inputs
@@ -58,14 +57,13 @@ public class Typing
             typed.push(s);
         }
         
-
         return createString(typed);
     }
         
     /**
      * @author Carl
      * 
-     * Creates the string (what user typed) by gathering/reversing the data stored in stack
+     * Creates the string (what user typed) by "gathering"/reversing the data stored in stack
      */
     public static String createString(Stack<String> stack)
     {

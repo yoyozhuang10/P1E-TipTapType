@@ -39,19 +39,18 @@ public class Game extends World
         {
             String keyPress = Greenfoot.getKey();
             String typed = "";
-            if (!keyPress.equals(null))
+            if (!keyPress.equals(null)) // The user has typed something
             {
                 typed = Typing.type(keyPress);
                 showTyped(typed);
-                print(typed);
             }
         }
-        catch (Exception NullPointerException){}
+        catch (Exception NullPointerException){} // Ignore error to allow the game to run
 
         if (checkCorrect(displayedWord.getValue(), typedWord.getValue()))
         {
             // User has typed correct word
-            print("Score +1");
+            //Increase score
             displayWord();
             Typing.clearTyped();
             showTyped(Typing.getTyped());
@@ -73,7 +72,7 @@ public class Game extends World
     /**
      * @author - Carl
      * 
-     * Displays the word the user will type
+     * Displays/updates the word the user will type
      */
     public void displayWord()
     {
@@ -103,20 +102,11 @@ public class Game extends World
     /**
      * @author - Carl
      * 
-     * Method will display what the user has currently typed
+     * Method will display/update what the user has currently typed
      * @param item - What the user has currently typed
      */
     public void showTyped(String item)
     {
-        print("1");
         typedWord.setValue(item);
-    }
-
-    /**
-     * Saves finger pain
-     */
-    public void print(String item)
-    {
-        System.out.println(item);
     }
 }
