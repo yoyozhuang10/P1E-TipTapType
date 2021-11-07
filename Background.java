@@ -57,7 +57,7 @@ public class Background extends Actor
             return;
         }
         animation.mark();
-        
+        imageIndex2 = imageIndex;
         setImage(background[imageIndex2]);
                 
         imageIndex2 = (imageIndex2 - 1) % background.length;

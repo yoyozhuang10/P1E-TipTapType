@@ -32,9 +32,9 @@ public class Play extends Background
         {
             this.setLocation(250, 302);
             setImage(clicked);
-            Greenfoot.delay(2);
+            Greenfoot.delay(1);
             reverseBackground();
-            
+            TypingWorld tw = new TypingWorld();
             Greenfoot.setWorld(new TypingWorld());
         }
         else
