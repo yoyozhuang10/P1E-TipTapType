@@ -20,8 +20,12 @@ public class MainMenu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        Label label = new Label ("Press Space to Start", 75);
-        addObject(label, x, y);
+        
+        Label start = new Label ("Press Space to Start", 75);
+        addObject(start, x, y);
+        
+        Label settings = new Label ("Press S for the Settings", 60);
+        addObject(settings, x, y + 100);
         SoundEffects.playMusic();
     }
     
@@ -35,6 +39,10 @@ public class MainMenu extends World
             Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
             Game.updateScore(); // Scoreboard
             Greenfoot.setWorld(g);
+        } else if ("s".equals(keyPress)){
+            Settings s = new Settings();
+            Typing.clearTyped();
+            Greenfoot.setWorld(s);
         }
     }
 }
