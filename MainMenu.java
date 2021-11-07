@@ -18,10 +18,12 @@ public class MainMenu extends World
      */
     public MainMenu()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        Label label = new Label ("Press Space to Start", 75);
-        addObject(label, x, y);
+        // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
+        super(800, 450, 1);
+        
+        Label start = new Label ("Press Space to Start", 75);
+        addObject(start, x, y);
+        
         SoundEffects.playMusic();
     }
     
@@ -30,11 +32,9 @@ public class MainMenu extends World
         String keyPress = Greenfoot.getKey();
         if ("space".equals(keyPress)) // If user presses space, start the game
         {
-            Game g = new Game();
-            Typing.clearTyped(); // What user didn't finish typing
-            Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
-            Game.updateScore(); // Scoreboard
-            Greenfoot.setWorld(g);
+            Settings s = new Settings();
+            Typing.clearTyped();
+            Greenfoot.setWorld(s);
         }
     }
 }

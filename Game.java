@@ -14,6 +14,12 @@ public class Game extends World
     Label displayedWord = new Label ("", 75); // Label that will display the word the user has to type
     Label typedWord = new Label ("", 75); // Label that displays what the user has typed
 
+    //Difficulty Variables
+    ArrayList<String> easyList = new ArrayList<String>();
+    ArrayList<String> mediumList = new ArrayList<String>();
+    ArrayList<String> hardList = new ArrayList<String>();
+    public static int difficulty = 1;
+    
     // Variables that contain "centre data"
     int x = getWidth()/2; 
     int y = getHeight()/2;
@@ -34,19 +40,20 @@ public class Game extends World
      */
     public Game()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
+        super(800, 450, 1);
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
+        sortWords(wordList);
         displayWord();
         
         // Create a timer and start it
-        addObject(c, 100, 100);
+        addObject(c, x-200, y-150);
         t.mark();
 
         // Create a score label
         currentScore = new Label(score, 30);
-        addObject(currentScore, 500, 100);
+        addObject(currentScore, x+200, y-150);
     }
 
     /**
@@ -86,6 +93,24 @@ public class Game extends World
             Greenfoot.setWorld(es);
         }
     }
+    
+    /**
+     * @author - Yoyo
+     * 
+     * Organises words based on length into different array lists
+     * @param arr - An array list of words meant to be sorted
+     */
+    public void sortWords(ArrayList<String> arr){
+        for(String s : arr){
+            if(s.length() <= 5){
+                easyList.add(s);
+            } else if(s.length() > 5 && s.length() < 8){
+                mediumList.add(s);
+            } else {
+                hardList.add(s);
+            }
+        }
+    }
 
     /**
      * @author - Carl
@@ -100,13 +125,32 @@ public class Game extends World
     }
 
     /**
-     * @author - Carl
+     * @author - Yoyo
      * 
      * Displays/updates the word the user will type
      */
     public void displayWord()
     {
-        displayedWord.setValue(wordList.get(rand()));
+        if(difficulty == 1){
+            displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
+        } else {
+            int probability = Greenfoot.getRandomNumber(10);
+            if(difficulty == 2){
+                if(probability < 4){
+                    displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
+                } else {
+                    displayedWord.setValue(mediumList.get(Greenfoot.getRandomNumber(mediumList.size())));
+                }
+            } else {
+                if(probability < 2){
+                    displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
+                } else if (probability < 4){
+                    displayedWord.setValue(mediumList.get(Greenfoot.getRandomNumber(mediumList.size())));
+                } else {
+                    displayedWord.setValue(hardList.get(Greenfoot.getRandomNumber(hardList.size())));
+                }
+            }
+        }
     }
 
     /**
@@ -151,7 +195,7 @@ public class Game extends World
     }
 
     /**
-     * @author Yoyo
+     * @author - Yoyo
      * 
      * Update score label and increases score by 1
      */
