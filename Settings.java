@@ -19,6 +19,7 @@ public class Settings extends World
     HardButton hb = new HardButton();
     
     Label current;
+    Label message = new Label ("Press Space to Begin", 30);
 
     public Settings()
     {    
@@ -47,6 +48,9 @@ public class Settings extends World
         
         Label hard = new Label("Hard", 40);
         addObject(hard, getWidth() / 4 * 3, 300);
+        
+        //Add message telling user how to continue
+        addObject(message, getWidth()/2, getHeight()/2+200);
     }
     
     //Returns the current difficulty level
@@ -73,9 +77,13 @@ public class Settings extends World
             current.setValue("Current difficulty: Hard");
         }
         
-        if("escape".equals(Greenfoot.getKey())){
-            MainMenu mm = new MainMenu();
-            Greenfoot.setWorld(mm);
+        if("space".equals(Greenfoot.getKey())){
+            Game g = new Game();
+            // Reset Everything
+            Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
+            Game.updateScore(); // Scoreboard
+            Typing.clearTyped(); // What user didn't finish typing
+            Greenfoot.setWorld(g);
         }
     }
 }

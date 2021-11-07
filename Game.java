@@ -40,24 +40,24 @@ public class Game extends World
      */
     public Game()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
+        super(800, 450, 1);
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
         sortWords(wordList);
         displayWord();
         
         // Create a timer and start it
-        addObject(c, 100, 100);
+        addObject(c, x-200, y-150);
         t.mark();
 
         // Create a score label
         currentScore = new Label(score, 30);
-        addObject(currentScore, 500, 100);
+        addObject(currentScore, x+200, y-150);
     }
 
     /**
-     * @author Carl
+     * @author Carl, Yoyo
      */
     public void act()
     {
