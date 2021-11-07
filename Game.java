@@ -63,6 +63,7 @@ public class Game extends World
             if (!keyPress.equals(null)) // The user has typed something
             {
                 typed = Typing.type(keyPress);
+                SoundEffects.keyPressSound();
                 showTyped(typed);
             }
         }
@@ -75,6 +76,7 @@ public class Game extends World
             displayWord();
             Typing.clearTyped();
             showTyped(Typing.getTyped());
+            SoundEffects.dingSound();
         }  
 
         // End game if timer reaches 0

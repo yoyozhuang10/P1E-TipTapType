@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SoundEffects
+comment0.text=\r\n\ Class\ handles\ sound\ effects\r\n\ \r\n\ @author\ Carl\ \r\n\ @version\ 2021.11.06\r\n
+comment1.params=
+comment1.target=void\ keyPressSound()
+comment1.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ a\ keyboard\ sound\ when\ a\ key\ is\ pressed\r\n
+comment2.params=
+comment2.target=void\ dingSound()
+comment2.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ a\ ding\ sfx\ when\ the\ user\ types\ the\ word\ correctly\r\n
+comment3.params=
+comment3.target=void\ playMusic()
+comment3.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ music\ in\ the\ background.\ Moves\ from\ tracks\ 1-3\r\n
+numComments=4

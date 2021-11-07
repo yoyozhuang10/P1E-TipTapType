@@ -22,6 +22,7 @@ public class MainMenu extends World
         super(600, 400, 1); 
         Label label = new Label ("Press Space to Start", 75);
         addObject(label, x, y);
+        SoundEffects.playMusic();
     }
     
     public void act()
@@ -30,6 +31,9 @@ public class MainMenu extends World
         if ("space".equals(keyPress)) // If user presses space, start the game
         {
             Game g = new Game();
+            Typing.clearTyped(); // What user didn't finish typing
+            Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
+            Game.updateScore(); // Scoreboard
             Greenfoot.setWorld(g);
         }
     }
