@@ -18,7 +18,7 @@ public class Game extends World
     ArrayList<String> easyList = new ArrayList<String>();
     ArrayList<String> mediumList = new ArrayList<String>();
     ArrayList<String> hardList = new ArrayList<String>();
-    int difficulty = 1;
+    public static int difficulty = 1;
     
     // Variables that contain "centre data"
     int x = getWidth()/2; 
@@ -57,7 +57,7 @@ public class Game extends World
     }
 
     /**
-     * @author Carl, Yoyo
+     * @author Carl
      */
     public void act()
     {
@@ -94,7 +94,12 @@ public class Game extends World
         }
     }
     
-    //Sort words in an array list based on length
+    /**
+     * @author - Yoyo
+     * 
+     * Organises words based on length into different array lists
+     * @param arr - An array list of words meant to be sorted
+     */
     public void sortWords(ArrayList<String> arr){
         for(String s : arr){
             if(s.length() <= 5){
@@ -120,7 +125,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Carl, Yoyo
+     * @author - Yoyo
      * 
      * Displays/updates the word the user will type
      */
@@ -146,7 +151,6 @@ public class Game extends World
                 }
             }
         }
-        //displayedWord.setValue(wordList.get(rand()));
     }
 
     /**
@@ -191,7 +195,7 @@ public class Game extends World
     }
 
     /**
-     * @author Yoyo
+     * @author - Yoyo
      * 
      * Update score label and increases score by 1
      */

@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Settings here.
+ * Create a settings menu where the user can toggle game difficulty
+ * User can leave the page by pressing escape
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Yoyo 
+ * 
  */
 public class Settings extends World
 {
@@ -13,23 +14,31 @@ public class Settings extends World
      * Constructor for objects of class Settings.
      * 
      */
+    EasyButton eb = new EasyButton();
+    MediumButton mb = new MediumButton();
+    HardButton hb = new HardButton();
+    
+    Label current;
+
     public Settings()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
         
+        //Show current difficulty
+        current = new Label("Current difficulty: " + currentDifficulty(), 40);
+        addObject(current, getWidth() / 2, getHeight() - 100);
+        
+        //Add instructions to settings page
         Label select = new Label("Please select your level of difficulty", 40);
         addObject(select, getWidth() / 2, 100);
         
-        EasyButton eb = new EasyButton();
+        //Add difficulty toggle buttons
         addObject(eb, getWidth() / 4, 200);
-        
-        MediumButton mb = new MediumButton();
         addObject(mb, getWidth() / 2, 200);
-        
-        HardButton hb = new HardButton();
         addObject(hb, getWidth() / 4 * 3, 200);
         
+        //Add labels to buttons
         Label easy = new Label("Easy", 40);
         addObject(easy, getWidth() / 4, 300);
         
@@ -40,7 +49,33 @@ public class Settings extends World
         addObject(hard, getWidth() / 4 * 3, 300);
     }
     
-    public void setDifficulty(){
+    //Returns the current difficulty level
+    public String currentDifficulty(){
+        if(Game.difficulty == 1){
+            return "Easy";
+        } else if (Game.difficulty == 2){
+            return "Medium";
+        } else {
+            return "Hard";
+        }
+    }
+    
+    //Changes the difficulty level based on the button the user presses
+    public void act(){
+        if(Greenfoot.mousePressed(eb)){
+            Game.difficulty = 1;
+            current.setValue("Current difficulty: Easy");
+        } else if (Greenfoot.mousePressed(mb)){
+            Game.difficulty = 2;
+            current.setValue("Current difficulty: Medium");
+        } else if (Greenfoot.mousePressed(hb)){
+            Game.difficulty = 3;
+            current.setValue("Current difficulty: Hard");
+        }
         
+        if("escape".equals(Greenfoot.getKey())){
+            MainMenu mm = new MainMenu();
+            Greenfoot.setWorld(mm);
+        }
     }
 }
