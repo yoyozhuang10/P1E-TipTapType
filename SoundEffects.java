@@ -38,10 +38,20 @@ public class SoundEffects
      */
     public static void playMusic()
     {
-        GreenfootSound t1 = new GreenfootSound("Track 1.mp3");
-        GreenfootSound t2 = new GreenfootSound("Track 2.mp3");
-        GreenfootSound t3 = new GreenfootSound("Track 3.mp3");
-        t1.play();
-        t1.setVolume(50);
+        String song = "Track " + rand() + ".mp3";
+        GreenfootSound track = new GreenfootSound(song);
+        track.playLoop();
+        track.setVolume(50);
+    }
+
+    /**
+     * @author - Carl
+     * 
+     * Generates a random number between 1 --> 3 inclusive
+     * @return - A random number
+     */
+    public static int rand()
+    {
+        return Greenfoot.getRandomNumber(3) + 1;
     }
 }
