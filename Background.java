@@ -13,7 +13,7 @@ public class Background extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     //GreenfootSound menuMusic = new GreenfootSound("music.mp3");
-    GreenfootImage[] background = new GreenfootImage[193];
+    public GreenfootImage[] background = new GreenfootImage[193];
     SimpleTimer animation = new SimpleTimer();
     
     boolean started = false;
@@ -23,6 +23,10 @@ public class Background extends Actor
     
     public Background()
     {
+        /**
+         * Initializes all frames of the animation image sequence.
+         */
+        
             for(int i = 0; i < 193; i++)
             {
                 background[i] = new GreenfootImage("main (" + (i + 1) + ").png");
@@ -35,6 +39,9 @@ public class Background extends Actor
     
     public void animateBackground()
     {
+        /**
+         * Sets the class image as every image within the image sequence, in order.
+         */
         
         if(animation.millisElapsed() < 50)
         {
@@ -51,7 +58,6 @@ public class Background extends Actor
     
     public void reverseBackground()
     {
-        
         if(animation.millisElapsed() < 50)
         {
             return;

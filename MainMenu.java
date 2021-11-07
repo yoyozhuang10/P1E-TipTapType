@@ -21,22 +21,17 @@ public class MainMenu extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
 
-        
-
         addObject(mainmenu, 400, 225);
-        
-        
-
         
     }
     
     public void act()
     {
         timer++;
-        if(timer == 183)
+        if(timer == 185)
         {
-            removeObject(mainmenu);
             prepare();
+            removeObject(mainmenu);
         }
     }
     

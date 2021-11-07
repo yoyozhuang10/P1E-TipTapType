@@ -13,8 +13,8 @@ public class Quit extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootImage idle = new GreenfootImage("quit_idle.png");
-    GreenfootImage clicked = new GreenfootImage("quit_clicked.png");
+    GreenfootImage idle = new GreenfootImage("settings_idle.png");
+    GreenfootImage clicked = new GreenfootImage("settings_clicked.png");
     private int buttonWidth = 200;
     private int buttonHeight = 60;
     
