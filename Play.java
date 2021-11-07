@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Play extends Actor
+public class Play extends Background
 {
     /**
      * Act - do whatever the Play wants to do. This method is called whenever
@@ -33,6 +33,8 @@ public class Play extends Actor
             this.setLocation(250, 302);
             setImage(clicked);
             Greenfoot.delay(2);
+            reverseBackground();
+            
             Greenfoot.setWorld(new TypingWorld());
         }
         else

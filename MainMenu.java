@@ -33,7 +33,7 @@ public class MainMenu extends World
     public void act()
     {
         timer++;
-        if(timer == 180)
+        if(timer == 183)
         {
             removeObject(mainmenu);
             prepare();

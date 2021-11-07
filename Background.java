@@ -15,9 +15,10 @@ public class Background extends Actor
     //GreenfootSound menuMusic = new GreenfootSound("music.mp3");
     GreenfootImage[] background = new GreenfootImage[193];
     SimpleTimer animation = new SimpleTimer();
-    int imageIndex = 1;
-    boolean started = false;
     
+    boolean started = false;
+    int imageIndex = 1;
+    int imageIndex2 = 193;
     
     
     public Background()
@@ -29,9 +30,6 @@ public class Background extends Actor
             setImage(background[0]); 
             
             animation.mark();
-            
-            
-            
 
     }
     
@@ -49,6 +47,20 @@ public class Background extends Actor
         imageIndex = (imageIndex + 1) % background.length;
         
         
+    }
+    
+    public void reverseBackground()
+    {
+        
+        if(animation.millisElapsed() < 50)
+        {
+            return;
+        }
+        animation.mark();
+        
+        setImage(background[imageIndex2]);
+                
+        imageIndex2 = (imageIndex2 - 1) % background.length;
     }
     
     public void act()
