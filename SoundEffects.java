@@ -27,7 +27,7 @@ public class SoundEffects
     public static void dingSound()
     {
         GreenfootSound sfxDing = new GreenfootSound("Ding.mp3");
-        sfxDing.setVolume(30);
+        sfxDing.setVolume(50);
         sfxDing.play();
     }
     
