@@ -25,7 +25,7 @@ public class Game extends World
     int y = getHeight()/2;
 
     // Timer variables
-    int totalTime = 10;
+    int totalTime = 5;
     SimpleTimer t = new SimpleTimer();
     Counter c = new Counter();
 
@@ -33,7 +33,6 @@ public class Game extends World
     public static int score;
     public static int highScore;
     public static Label currentScore;
-    
     
     
     /**
@@ -56,7 +55,7 @@ public class Game extends World
         t.mark();
 
         // Create a score label
-        currentScore = new Label(score, 30);
+        currentScore = new Label("Score: " + score, 30);
         addObject(currentScore, x+200, y-150);
     }
 
@@ -125,8 +124,10 @@ public class Game extends World
     public void displayWord()
     {
         if(difficulty == 1){
+            //100% easy word split
             displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
         } else {
+            //40% easy word 60% medium word split
             int probability = Greenfoot.getRandomNumber(10);
             if(difficulty == 2){
                 if(probability < 4){
@@ -135,6 +136,7 @@ public class Game extends World
                     displayedWord.setValue(mediumList.get(Greenfoot.getRandomNumber(mediumList.size())));
                 }
             } else {
+                //20% easy word 20% medium word 60% hard word split
                 if(probability < 2){
                     displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
                 } else if (probability < 4){
@@ -195,6 +197,6 @@ public class Game extends World
     public static void updateScore()
     {
         score++;
-        currentScore.setValue(score);
+        currentScore.setValue("Score: " + score);
     }
 }

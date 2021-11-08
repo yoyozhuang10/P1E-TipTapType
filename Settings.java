@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Create a settings menu where the user can toggle game difficulty
- * User can leave the page by pressing escape
+ * User can start the game by pressing space
  * 
  * @author Yoyo 
  * 
@@ -14,10 +14,12 @@ public class Settings extends World
      * Constructor for objects of class Settings.
      * 
      */
+    //Button variables
     EasyButton eb = new EasyButton();
     MediumButton mb = new MediumButton();
     HardButton hb = new HardButton();
     
+    //Label variables
     Label current;
     Label message = new Label ("Press Space to Begin", 25);
 
@@ -79,23 +81,23 @@ public class Settings extends World
     //Changes the difficulty level based on the button the user presses
     public void act(){
         if(Greenfoot.mousePressed(eb)){
+            SoundEffects.clickSound();
             Game.difficulty = 1;
             //current.setValue("Current difficulty: Easy");
         } else if (Greenfoot.mousePressed(mb)){
+            SoundEffects.clickSound();
             Game.difficulty = 2;
             //current.setValue("Current difficulty: Medium");
         } else if (Greenfoot.mousePressed(hb)){
+            SoundEffects.clickSound();
             Game.difficulty = 3;
             //current.setValue("Current difficulty: Hard");
         }
         
+        //Go to game once user presses space
         if("space".equals(Greenfoot.getKey())){
-            Game g = new Game();
-            // Reset Everything
-            Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
-            Game.updateScore(); // Scoreboard
-            Typing.clearTyped(); // What user didn't finish typing
-            Greenfoot.setWorld(g);
+            Countdown cd = new Countdown();
+            Greenfoot.setWorld(cd);
         }
     }
 }
