@@ -24,10 +24,15 @@ public class MainMenu extends World
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1);
         
-        Label start = new Label ("Press Space to Start", 75);
-        addObject(start, x, y);
+        //Label start = new Label ("Press Space to Start", 75);
+        //addObject(start, x, y);
+        
+        PlayButton play = new PlayButton();
+        addObject(play, x, y);
         
         SoundEffects.playMusic();
+        
+        
     }
     
     public void act()

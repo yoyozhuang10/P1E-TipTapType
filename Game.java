@@ -34,6 +34,8 @@ public class Game extends World
     public static int highScore;
     public static Label currentScore;
     
+    
+    
     /**
      * Constructor for objects of class Game.
      * 
@@ -42,6 +44,8 @@ public class Game extends World
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1);
+        setBackground(new GreenfootImage("gamebackgroundsmall.png"));
+        
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
         sortWords(wordList);
