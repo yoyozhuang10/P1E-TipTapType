@@ -69,12 +69,15 @@ public class Settings extends World
     //Changes the difficulty level based on the button the user presses
     public void act(){
         if(Greenfoot.mousePressed(eb)){
+            SoundEffects.clickSound();
             Game.difficulty = 1;
             current.setValue("Current difficulty: Easy");
         } else if (Greenfoot.mousePressed(mb)){
+            SoundEffects.clickSound();
             Game.difficulty = 2;
             current.setValue("Current difficulty: Medium");
         } else if (Greenfoot.mousePressed(hb)){
+            SoundEffects.clickSound();
             Game.difficulty = 3;
             current.setValue("Current difficulty: Hard");
         }

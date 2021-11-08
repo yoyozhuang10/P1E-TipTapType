@@ -21,6 +21,18 @@ public class SoundEffects
     }
     
     /**
+     * @author Yoyo
+     * 
+     * Plays a click sound when a button is clicked
+     */
+    public static void clickSound()
+    {
+        GreenfootSound sfxClick = new GreenfootSound("Click.mp3");
+        sfxClick.setVolume(50);
+        sfxClick.play();
+    }
+    
+    /**
      * @author Carl
      * 
      * Plays a keyboard sound when a key is pressed
