@@ -1,61 +1,46 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PlayButton here.
+ * Write a description of class Button here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayButton extends Actor
+public class Button extends Actor
 {
     /**
-     * Act - do whatever the PlayButton wants to do. This method is called whenever
+     * Act - do whatever the Button wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    GreenfootImage clicked = new GreenfootImage("play_clicked.png");
-    GreenfootImage idle = new GreenfootImage("play_idle.png");
-    
-    public PlayButton()
+    public void act() 
     {
-        idle.scale(220,60);
-        clicked.scale(210,60);
-        
-        setImage(idle);
-    }
-    
-    public void act()
-    {
-        mouseClick();        
-        mouseHover();
-    }
-    
-    public void mouseClick()
+        // Add your action code here.
+    }  
+    public void mouseInteract(GreenfootImage idle, GreenfootImage clicked)
     {
         if(Greenfoot.mousePressed(this))
         {
             setImage(clicked);
             setLocation(getX(), getY() + 5);
-            Greenfoot.delay(4);
+            Greenfoot.delay(2);
             setLocation(getX(), getY() - 5);
             Greenfoot.setWorld(new Settings());
         }
         else
         {
             setImage(idle);
-            
         }
     }
     
-    public void mouseHover()
+    public void mouseHovering()
     {
         if(Greenfoot.mouseMoved(this))
         {
-            getImage().scale(220, 65);
+            getImage().scale(170, 50);
         }
         if(Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this))
         {
-            getImage().scale(210,60);
+            getImage().scale(160,45);
         }
     }
 }

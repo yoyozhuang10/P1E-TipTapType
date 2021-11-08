@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=SoundEffects
-comment0.text=\r\n\ Class\ handles\ sound\ effects\r\n\ \r\n\ @author\ Carl\ \r\n\ @version\ 2021.11.06\r\n
+comment0.text=\n\ Class\ handles\ sound\ effects\n\ \n\ @author\ Carl\ \n\ @version\ 2021.11.06\n
 comment1.params=
 comment1.target=void\ keyPressSound()
-comment1.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ a\ keyboard\ sound\ when\ a\ key\ is\ pressed\r\n
+comment1.text=\n\ @author\ Carl\n\ \n\ Plays\ a\ keyboard\ sound\ when\ a\ key\ is\ pressed\n
 comment2.params=
 comment2.target=void\ dingSound()
-comment2.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ a\ ding\ sfx\ when\ the\ user\ types\ the\ word\ correctly\r\n
+comment2.text=\n\ @author\ Carl\n\ \n\ Plays\ a\ ding\ sfx\ when\ the\ user\ types\ the\ word\ correctly\n
 comment3.params=
 comment3.target=void\ playMusic()
-comment3.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ music\ in\ the\ background.\ Moves\ from\ tracks\ 1-3\r\n
+comment3.text=\n\ @author\ Carl\n\ \n\ Plays\ music\ in\ the\ background.\ Moves\ from\ tracks\ 1-3\n
 comment4.params=
 comment4.target=int\ rand()
-comment4.text=\r\n\ @author\ -\ Carl\r\n\ \r\n\ Generates\ a\ random\ number\ between\ 1\ -->\ 3\ inclusive\r\n\ @return\ -\ A\ random\ number\r\n
+comment4.text=\n\ @author\ -\ Carl\n\ \n\ Generates\ a\ random\ number\ between\ 1\ -->\ 3\ inclusive\n\ @return\ -\ A\ random\ number\n
 numComments=5
