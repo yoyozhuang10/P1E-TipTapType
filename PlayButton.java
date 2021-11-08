@@ -38,12 +38,12 @@ public class PlayButton extends Actor
             setLocation(getX(), getY() + 5);
             Greenfoot.delay(4);
             setLocation(getX(), getY() - 5);
+            Typing.clearTyped();
             Greenfoot.setWorld(new Settings());
         }
         else
         {
             setImage(idle);
-            
         }
     }
     

@@ -80,13 +80,14 @@ public class Game extends World
         }
         catch (Exception NullPointerException){} // Ignore error to allow the game to run
 
+	// Check if user typed the word correctly
         if (checkCorrect(displayedWord.getValue(), typedWord.getValue()))
         {
             // User has typed correct word
             updateScore();
-            displayWord();
+            displayWord(); // Display new word
             Typing.clearTyped();
-            showTyped(Typing.getTyped());
+            showTyped(Typing.getTyped()); // Clear what the user has typed
             SoundEffects.dingSound();
         }  
 
@@ -114,18 +115,6 @@ public class Game extends World
                 hardList.add(s);
             }
         }
-    }
-
-    /**
-     * @author - Carl
-     * 
-     * Generates a random number between 0 -> ArrayList size. 
-     * To be only used with wordList
-     * @return - A random number
-     */
-    public int rand()
-    {
-        return Greenfoot.getRandomNumber(wordList.size());
     }
 
     /**

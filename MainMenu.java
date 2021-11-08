@@ -13,7 +13,8 @@ public class MainMenu extends World
     int y = getHeight()/2;
 
     // Background animation
-    GreenfootImage[] arr;
+    static GreenfootImage[] arr = new GreenfootImage[100];
+    boolean animation = false;
     
     /**
      * Constructor for objects of class MainMenu.
@@ -22,80 +23,61 @@ public class MainMenu extends World
     public MainMenu()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
-        super(800, 450, 1);
-        
-        //Label start = new Label ("Press Space to Start", 75);
-        //addObject(start, x, y);
-        
-        PlayButton play = new PlayButton();
-        addObject(play, x, y);
-        
-        SoundEffects.playMusic();
-        
-        
+        super(800, 450, 1);   
+        createImages();
     }
     
     public void act()
     {
-        String keyPress = Greenfoot.getKey();
-        if ("space".equals(keyPress)) // If user presses space, start the game
-        {
-            Settings s = new Settings();
-            Typing.clearTyped();
-            Greenfoot.setWorld(s);
-        }
-        if ("s".equals(keyPress))
-        {
-            print("Creating images...");
-            createImages();
-        }
-        if ("d".equals(keyPress))
+	    // Play the opening animation once
+        if (!animation)
         {
             playAnimation();
-        }
-        if ("f".equals(keyPress))
-        {
-            print("Playing reverse animation...");
-            playReverseAnimation();
-        }
-        if ("c".equals(keyPress))
-        {
-            print("Clearing object.");
-            arr = null;
+            addObject();
+            SoundEffects.playMusic();
+            animation = true;
         }
     }
 
-    public void createImages()
+    /**
+     * @author Carl
+     * 
+     * Creates an array of GreenfootImages to be used for background animation
+     */
+    public static void createImages()
     {
-        arr = new GreenfootImage[100];
         for (int i = 0; i < arr.length; i++)
         {
             arr[i] = new GreenfootImage("main (" + (i+1) + ").png");
         }
-        print("Image array complete.");
     }
 
+    /**
+     * @author Carl
+     * 
+     * Plays the animation (forward animation)
+     */
     public void playAnimation()
     {
-        print("Playing animation...");
         for (int i = 0; i < arr.length; i++)
         {
-            Greenfoot.delay(1);
+            Greenfoot.delay(1); // Prevents animation from being played instantly
             setBackground(arr[i]);
         }
-        print("Animation finished");
     }
-
-    public void playReverseAnimation()
+    
+    /**
+     * @author Carl
+     * 
+     * Adds the play button
+     */
+    public void addObject()
     {
-        for (int i = arr.length-1; i >= 0; i--)
-        {
-            Greenfoot.delay(1);
-            setBackground(arr[i]);
-        }
-        print("Animation finished");
+        PlayButton play = new PlayButton();
+        addObject(play, x, y);
     }
 
+    // For debugging purposes
     public void print(String item)
     {
         System.out.println(item);
