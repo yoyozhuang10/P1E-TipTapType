@@ -65,6 +65,10 @@ public class Settings extends World
         
         //Add message telling user how to continue
         addObject(message, getWidth()/2, 400);
+        
+        String trap = Greenfoot.getKey(); 
+        // Above line is essential code to prevent bug where if user is spamming space in the main menu
+        // and then pressing the play button, the user will have no opportunity to choose difficulty.
     }
     
     //Returns the current difficulty level
@@ -95,9 +99,6 @@ public class Settings extends World
         }
 
         //Go to game once user presses space
-        String trap = Greenfoot.getKey(); 
-        // Above line is essential code to prevent bug where if user is spamming space in the main menu
-        // and then pressing the play button, the user will have no opportunity to choose difficulty.
         if("space".equals(Greenfoot.getKey())){
             Countdown cd = new Countdown();
             playReverseAnimation();
@@ -106,7 +107,7 @@ public class Settings extends World
     }
     
     public void playReverseAnimation()
-    {	
+    {    
         removeObjects(getObjects(null)); // Remove all objects
 
         for (int i = MainMenu.arr.length-1; i >= 0; i--)
