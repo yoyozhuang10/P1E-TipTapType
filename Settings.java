@@ -97,7 +97,19 @@ public class Settings extends World
         //Go to game once user presses space
         if("space".equals(Greenfoot.getKey())){
             Countdown cd = new Countdown();
+            playReverseAnimation();
             Greenfoot.setWorld(cd);
+        }
+    }
+    
+    public void playReverseAnimation()
+    {	
+        removeObjects(getObjects(null)); // Remove all objects
+
+        for (int i = MainMenu.arr.length-1; i >= 0; i--)
+        {
+            Greenfoot.delay(1);
+            setBackground(MainMenu.arr[i]);
         }
     }
 }

@@ -25,7 +25,7 @@ public class Game extends World
     int y = getHeight()/2;
 
     // Timer variables
-    int totalTime = 5;
+    int totalTime = 30;
     SimpleTimer t = new SimpleTimer();
     Counter c = new Counter();
 
@@ -79,7 +79,7 @@ public class Game extends World
         }
         catch (Exception NullPointerException){} // Ignore error to allow the game to run
 
-	// Check if user typed the word correctly
+    // Check if user typed the word correctly
         if (checkCorrect(displayedWord.getValue(), typedWord.getValue()))
         {
             // User has typed correct word
