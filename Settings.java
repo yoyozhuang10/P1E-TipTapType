@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Create a settings menu where the user can toggle game difficulty
  * User can leave the page by pressing escape
  * 
- * @author Yoyo 
+ * @author Yoyo, Carl
  * 
  */
 public class Settings extends World
@@ -91,6 +91,11 @@ public class Settings extends World
         }
     }
     
+    /**
+     * @author Carl
+     * 
+     * Method plays the background animation (in reverse)
+     */
     public void playReverseAnimation()
     {	
         removeObjects(getObjects(null)); // Remove all objects

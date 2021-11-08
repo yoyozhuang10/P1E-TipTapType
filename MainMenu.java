@@ -29,6 +29,7 @@ public class MainMenu extends World
     
     public void act()
     {
+	    // Play the opening animation once
         if (!animation)
         {
             playAnimation();
@@ -38,6 +39,11 @@ public class MainMenu extends World
         }
     }
 
+    /**
+     * @author Carl
+     * 
+     * Creates an array of GreenfootImages to be used for background animation
+     */
     public static void createImages()
     {
         for (int i = 0; i < arr.length; i++)
@@ -46,21 +52,32 @@ public class MainMenu extends World
         }
     }
 
+    /**
+     * @author Carl
+     * 
+     * Plays the animation (forward animation)
+     */
     public void playAnimation()
     {
         for (int i = 0; i < arr.length; i++)
         {
-            Greenfoot.delay(1);
+            Greenfoot.delay(1); // Prevents animation from being played instantly
             setBackground(arr[i]);
         }
     }
     
+    /**
+     * @author Carl
+     * 
+     * Adds the play button
+     */
     public void addObject()
     {
         PlayButton play = new PlayButton();
         addObject(play, x, y);
     }
 
+    // For debugging purposes
     public void print(String item)
     {
         System.out.println(item);

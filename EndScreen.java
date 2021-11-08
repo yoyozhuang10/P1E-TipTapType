@@ -34,10 +34,10 @@ public class EndScreen extends World
         if ("space".equals(Greenfoot.getKey()))
         {
             Game game = new Game();
-            // Reset Everything
+            // Reset everything to prevent bugs
             Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
-            Game.updateScore(); // Scoreboard
-            Typing.clearTyped(); // What user didn't finish typing
+            Game.updateScore(); // Update the scoreboard to reflect the reset
+            Typing.clearTyped(); // Clear what user didn't finish typing
             Greenfoot.setWorld(game);
         }
     }
