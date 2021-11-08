@@ -47,7 +47,7 @@ public class Typing
             s.equals("shift") || s.equals("caps lock") ||
             s.equals("tab") || s.equals("alt") ||
             s.equals("alt graph") || s.equals("windows") ||
-            s.equals("escape") || s.equals("space")
+            s.equals("escape") || s.equals("space") || s.equals("undefined")
         )
         {
             // Do nothing

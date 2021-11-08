@@ -9,6 +9,18 @@ import greenfoot.*;
 public class SoundEffects  
 { 
     /**
+     * @author Yoyo
+     * 
+     * Plays a race sound during the countdown screen
+     */
+    public static void raceSound()
+    {
+        GreenfootSound sfxRace = new GreenfootSound("Race.mp3");
+        sfxRace.setVolume(50);
+        sfxRace.play();
+    }
+    
+    /**
      * @author Carl
      * 
      * Plays a keyboard sound when a key is pressed

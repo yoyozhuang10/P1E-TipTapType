@@ -13,8 +13,8 @@ public class Countdown extends World
      * 
      */
     //Countdown variables
-    double counter = 4.0;
-    double milliCounter = 400.0;
+    double counter = 3.99;
+    double milliCounter = 350.0;
     Label count;
     
     public Countdown()
@@ -26,13 +26,16 @@ public class Countdown extends World
         //Add counter label to screen
         count = new Label((int)counter, 60);
         addObject(count, getWidth() / 2, getHeight() / 2);
+        
+        //Play countdown music
+        SoundEffects.raceSound();
     }
     
     //Counts down from 3 before game starts
     public void act(){
         //Change counter variable
         milliCounter--;
-        if(milliCounter <= counter * 100){
+        if(milliCounter <= counter * 70){
             counter--;
             count.setValue((int)counter);
         }
