@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class PlayButton here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jayden
+ * @version 2021.11.08
  */
 public class PlayButton extends Actor
 {
@@ -34,6 +34,7 @@ public class PlayButton extends Actor
     {
         if(Greenfoot.mousePressed(this))
         {
+            SoundEffects.clickSound();
             setImage(clicked);
             setLocation(getX(), getY() + 5);
             Greenfoot.delay(4);

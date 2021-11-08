@@ -1,17 +1,20 @@
 #BlueJ class context
 comment0.target=MainMenu
-comment0.text=\n\ Here,\ the\ user\ has\ the\ option\ to\ start\ a\ new\ game\ or\ not\n\ \n\ @author\ Carl\n\ @version\ 2021.11.05\n
+comment0.text=\r\n\ Here,\ the\ user\ has\ the\ option\ to\ start\ a\ new\ game\ or\ not\r\n\ \r\n\ @author\ Carl\r\n\ @version\ 2021.11.05\r\n
 comment1.params=
 comment1.target=MainMenu()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MainMenu.\n\ \n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MainMenu.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ createImages()
+comment3.text=\r\n\ @author\ Carl\r\n\ \r\n\ Creates\ an\ array\ of\ GreenfootImages\ to\ be\ used\ for\ background\ animation\r\n
 comment4.params=
 comment4.target=void\ playAnimation()
+comment4.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ the\ animation\ (forward\ animation)\r\n
 comment5.params=
 comment5.target=void\ addObject()
+comment5.text=\r\n\ @author\ Carl\r\n\ \r\n\ Adds\ the\ play\ button\r\n
 comment6.params=item
 comment6.target=void\ print(java.lang.String)
 numComments=7

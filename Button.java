@@ -22,7 +22,7 @@ public class Button extends Actor
         {
             setImage(clicked);
             setLocation(getX(), getY() + 5);
-            Greenfoot.delay(2);
+            Greenfoot.delay(1);
             setLocation(getX(), getY() - 5);
             Greenfoot.setWorld(new Settings());
         }
