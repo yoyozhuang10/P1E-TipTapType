@@ -51,6 +51,9 @@ public class Settings extends World
         
         //Add message telling user how to continue
         addObject(message, getWidth()/2, getHeight()/2+200);
+        
+        // Set background
+        setBackground(MainMenu.arr[MainMenu.arr.length-1]);
     }
     
     //Returns the current difficulty level
@@ -79,11 +82,23 @@ public class Settings extends World
         
         if("space".equals(Greenfoot.getKey())){
             Game g = new Game();
-            // Reset Everything
+            playReverseAnimation();
+            // Reset everything to prevent bugs
             Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
             Game.updateScore(); // Scoreboard
             Typing.clearTyped(); // What user didn't finish typing
             Greenfoot.setWorld(g);
+        }
+    }
+    
+    public void playReverseAnimation()
+    {	
+        removeObjects(getObjects(null)); // Remove all objects
+        
+        for (int i = MainMenu.arr.length-1; i >= 0; i--)
+        {
+            Greenfoot.delay(1);
+            setBackground(MainMenu.arr[i]);
         }
     }
 }
