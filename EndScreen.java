@@ -35,16 +35,13 @@ public class EndScreen extends World
  
     }
     
+    //Play again if user presses key
     public void act()
     {
         if ("space".equals(Greenfoot.getKey()))
         {
-            Game game = new Game();
-            // Reset everything to prevent bugs
-            Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
-            Game.updateScore(); // Update the scoreboard to reflect the reset
-            Typing.clearTyped(); // Clear what user didn't finish typing
-            Greenfoot.setWorld(game);
+            Countdown cd = new Countdown();
+            Greenfoot.setWorld(cd);
         }
     }
 }
