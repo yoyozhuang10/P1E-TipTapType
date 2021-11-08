@@ -93,8 +93,11 @@ public class Settings extends World
             Game.difficulty = 3;
             //current.setValue("Current difficulty: Hard");
         }
-        
+
         //Go to game once user presses space
+        String trap = Greenfoot.getKey(); 
+        // Above line is essential code to prevent bug where if user is spamming space in the main menu
+        // and then pressing the play button, the user will have no opportunity to choose difficulty.
         if("space".equals(Greenfoot.getKey())){
             Countdown cd = new Countdown();
             playReverseAnimation();
@@ -111,5 +114,10 @@ public class Settings extends World
             Greenfoot.delay(1);
             setBackground(MainMenu.arr[i]);
         }
+    }
+
+    public void print(Object x)
+    {
+        System.out.println(x);
     }
 }

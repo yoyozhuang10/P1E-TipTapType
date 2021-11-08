@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ act()
 comment4.params=
 comment4.target=void\ playReverseAnimation()
-numComments=5
+comment5.params=x
+comment5.target=void\ print(java.lang.Object)
+numComments=6
