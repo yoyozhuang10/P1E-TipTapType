@@ -9,9 +9,11 @@ import java.util.ArrayList;
  */
 public class Game extends World
 {
+
     // Essential Variables
     public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores words from words.txt
     public static ArrayList<String> shownWords = new ArrayList<String>(); // Keeps a record of shown words
+
     Label displayedWord = new Label ("", 75); // Label that will display the word the user has to type
     Label typedWord = new Label ("", 75); // Label that displays what the user has typed
 
@@ -34,10 +36,10 @@ public class Game extends World
     public static int score;
     public static int highScore;
     public static Label currentScore;
-    
+
     public static int mistakes = 0;
     public static int typedChars = 0;
-    
+
     /**
      * Constructor for objects of class Game.
      * 
@@ -76,9 +78,9 @@ public class Game extends World
             String typed = "";
             if (!keyPress.equals(null)) // The user has typed something
             {
-                typed = Typing.type(keyPress);
+                typed = Typing.type(keyPress); // Update the program what user typed
                 SoundEffects.keyPressSound();
-                showTyped(typed);
+                showTyped(typed); // Update display what user typed
             }
         }
         catch (Exception NullPointerException){} // Ignore error to allow the game to run
@@ -89,8 +91,8 @@ public class Game extends World
             // User has typed correct word
             updateScore();
             displayWord(); // Display new word
-            Typing.clearTyped();
-            showTyped(Typing.getTyped()); // Clear what the user has typed
+            Typing.clearTyped(); // Tell the program to clear what user typed
+            showTyped(Typing.getTyped()); // Clear what the user has typed on display
             SoundEffects.dingSound();
         }  
 
@@ -103,7 +105,7 @@ public class Game extends World
     }
     
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Organises words based on length into different array lists
      * @param arr - An array list of words meant to be sorted
@@ -121,7 +123,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Displays/updates the word the user will type
      */
@@ -165,7 +167,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Carl
+     * @author Carl
      * 
      * Checks if the displayed word matches with what the user has typed
      * @param displayed - The word that is displayed
@@ -185,7 +187,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Carl
+     * @author Carl
      * 
      * Method will display/update what the user has currently typed
      * @param item - What the user has currently typed
@@ -196,7 +198,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Update timer value on screen
      */
@@ -206,7 +208,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Update score label and increases score by 1
      */

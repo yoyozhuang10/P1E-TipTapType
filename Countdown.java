@@ -9,11 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Countdown extends World
 {
     boolean acted = false;
-    /**
-     * Constructor for objects of class Countdown.
-     * 
-     */
-    
+
     //Countdown variables
     double counter = 3.99;
     double milliCounter = 350.0;
@@ -85,5 +81,4 @@ public class Countdown extends World
         Typing.clearTyped(); // What user didn't finish typing
         Greenfoot.setWorld(g);
     }
-
 }

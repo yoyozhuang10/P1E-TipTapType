@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Typing here.
+ * Class contains methods that deal with anything involving typing for the game
  * 
  * @author Carl
  * @version 2021.11.05
@@ -62,7 +62,7 @@ public class Typing
         {
             // Do nothing
         }
-        else // Append newly typed into string to be dispalyed
+        else // Append newly typed into string to stack
         {
             Game.typedChars++;
             typed.push(s);

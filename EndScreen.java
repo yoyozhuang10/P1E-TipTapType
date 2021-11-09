@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EndScreen here.
+ * Endscreen world
  * 
  * @author Yoyo, Jayden
  * @version 2021.11.05
@@ -15,6 +15,7 @@ public class EndScreen extends World
      * Constructor for objects of class EndScreen.
      * 
      */
+
     // Label variables
     Label wpm;
     Label errors;

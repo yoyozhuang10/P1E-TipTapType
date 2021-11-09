@@ -1,18 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Title here.
+ * Title actor
  * 
  * @author Jayden 
- * @version (a version number or a date)
+ * @version 2021.11.09
  */
 public class Title extends Actor
 {
-    /**
-     * Act - do whatever the Title wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     public Title()
     {
         GreenfootImage title = new GreenfootImage("title.png");

@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Here, the user has the option to start a new game or not
+ * World where user presses space to start the game
  * 
- * @author Carl
+ * @author Carl, Jayden
  * @version 2021.11.05
  */
 public class MainMenu extends World
@@ -67,9 +67,9 @@ public class MainMenu extends World
     }
     
     /**
-     * @author Carl
+     * @author Carl, Jayden
      * 
-     * Adds the play button
+     * Adds the play button and title screen
      */
     public void addObject()
     {
@@ -78,11 +78,5 @@ public class MainMenu extends World
         
         PlayButton play = new PlayButton();
         addObject(play, x, 300);
-    }
-
-    // For debugging purposes
-    public void print(String item)
-    {
-        System.out.println(item);
     }
 }
