@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Plays a short countdown before the game starts
  * 
- * @author Yoyo
+ * @author Yoyo, Carl
  * @version 2021.11.08
  */
 public class Countdown extends World
@@ -13,11 +13,17 @@ public class Countdown extends World
      * Constructor for objects of class Countdown.
      * 
      */
+    
     //Countdown variables
     double counter = 3.99;
     double milliCounter = 350.0;
     Label count;
     
+    /**
+     * @author - Yoyo
+     * 
+     * Creates a world with for the countdown
+     */
     public Countdown()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
@@ -29,6 +35,11 @@ public class Countdown extends World
         addObject(count, getWidth() / 2, getHeight() / 2);
     }
     
+    /**
+     * @author - Carl
+     * 
+     * Executes countdown once
+     */
     public void act()
     {
         // Run if statement once
@@ -39,7 +50,11 @@ public class Countdown extends World
         }
     }
 
-    //Counts down from 3 before game starts
+    /**
+     * @author - Carl, Yoyo
+     * 
+     * Displays a 3, 2, 1, Start! countdown, plays music too
+     */
     public void countdown(){
         for (int i = 3; i > 0; i--)
         {
@@ -53,7 +68,11 @@ public class Countdown extends World
         switchWorld();
     }
 
-    // Switch the world after countdown
+    /**
+     * @author - Yoyo
+     * 
+     * Switch world to game world after countdown plays    
+     */
     public void switchWorld()
     {
         Game g = new Game();
@@ -64,8 +83,4 @@ public class Countdown extends World
         Greenfoot.setWorld(g);
     }
 
-    public void print(Object x)
-    {
-        System.out.println(x);
-    }
 }

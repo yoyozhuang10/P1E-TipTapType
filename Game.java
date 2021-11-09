@@ -45,6 +45,7 @@ public class Game extends World
         super(800, 450, 1);
         setBackground(new GreenfootImage("gamebackgroundsmall.png"));
         
+        // Add words to the screen
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
         sortWords(wordList);
@@ -79,7 +80,7 @@ public class Game extends World
         }
         catch (Exception NullPointerException){} // Ignore error to allow the game to run
 
-    // Check if user typed the word correctly
+        // Check if user typed the word correctly
         if (checkCorrect(displayedWord.getValue(), typedWord.getValue()))
         {
             // User has typed correct word
