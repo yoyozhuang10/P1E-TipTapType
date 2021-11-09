@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Button here.
  * 
- * @author (your name) 
+ * @author Jayden 
  * @version (a version number or a date)
  */
 public class Button extends Actor
@@ -14,8 +14,10 @@ public class Button extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        
     }  
+
+    //Plays button animation and changes world
     public void mouseInteract(GreenfootImage idle, GreenfootImage clicked)
     {
         if(Greenfoot.mousePressed(this))
@@ -32,6 +34,7 @@ public class Button extends Actor
         }
     }
     
+    //Scales the button when hovering over for more interactivity
     public void mouseHovering()
     {
         if(Greenfoot.mouseMoved(this))
@@ -41,6 +44,20 @@ public class Button extends Actor
         if(Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this))
         {
             getImage().scale(160,45);
+        }
+    }
+    
+    //Fades out the button when method is called
+    public void fadeOut(GreenfootImage idle)
+    {
+        getImage().setTransparency(255);
+        int i = 255;
+        GreenfootImage img = idle;
+        while(i > 0)
+        {
+            idle.setTransparency(i);
+            setImage(idle);
+            i--;
         }
     }
 }

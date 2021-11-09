@@ -27,5 +27,9 @@ public class EasyButton extends Button
     {
         mouseInteract(idle, clicked);        
         mouseHovering();
+        if(Greenfoot.isKeyDown("space"))
+        {
+            fadeOut(idle);
+        }
     }
 }

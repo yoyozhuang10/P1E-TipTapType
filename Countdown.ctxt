@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Countdown
-comment0.text=\r\n\ Plays\ a\ short\ countdown\ before\ the\ game\ starts\r\n\ \r\n\ @author\ Yoyo\r\n\ @version\ 2021.11.08\r\n
+comment0.text=\n\ Plays\ a\ short\ countdown\ before\ the\ game\ starts\n\ \n\ @author\ Yoyo\n\ @version\ 2021.11.08\n
 comment1.params=
 comment1.target=Countdown()
 comment2.params=
