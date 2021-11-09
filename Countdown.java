@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Countdown extends World
 {
+    boolean acted = false;
     /**
      * Constructor for objects of class Countdown.
      * 
@@ -26,32 +27,45 @@ public class Countdown extends World
         //Add counter label to screen
         count = new Label((int)counter, 60);
         addObject(count, getWidth() / 2, getHeight() / 2);
-        
-        //Play countdown music
-        SoundEffects.raceSound();
     }
     
+    public void act()
+    {
+        // Run if statement once
+        if (!acted)
+        {
+            acted = true;
+            countdown();
+        }
+    }
+
     //Counts down from 3 before game starts
-    public void act(){
-        //Change counter variable
-        milliCounter--;
-        if(milliCounter <= counter * 70){
-            counter--;
-            count.setValue((int)counter);
+    public void countdown(){
+        for (int i = 3; i > 0; i--)
+        {
+            count.setValue(i);
+            SoundEffects.countdown();
+            Greenfoot.delay(60);
         }
-        
-        if(counter < 1){
-            count.setValue("Start!");
-        }
-        
-        //Switch over to game screen
-        if(counter < 0){
-            Game g = new Game();
-            // Reset Everything
-            Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
-            Game.updateScore(); // Scoreboard
-            Typing.clearTyped(); // What user didn't finish typing
-            Greenfoot.setWorld(g);
-        }
+        count.setValue("GO!");
+        SoundEffects.go();
+        Greenfoot.delay(30);
+        switchWorld();
+    }
+
+    // Switch the world after countdown
+    public void switchWorld()
+    {
+        Game g = new Game();
+        // Reset Everything
+        Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
+        Game.updateScore(); // Scoreboard
+        Typing.clearTyped(); // What user didn't finish typing
+        Greenfoot.setWorld(g);
+    }
+
+    public void print(Object x)
+    {
+        System.out.println(x);
     }
 }

@@ -13,10 +13,22 @@ public class SoundEffects
      * 
      * Plays a race sound during the countdown screen
      */
-    public static void raceSound()
+    public static void countdown()
     {
-        GreenfootSound sfxRace = new GreenfootSound("Race.mp3");
-        sfxRace.setVolume(50);
+        GreenfootSound sfxRace = new GreenfootSound("Countdown.mp3");
+        sfxRace.setVolume(25);
+        sfxRace.play();
+    }
+
+    /**
+     * @author Carl
+     * 
+     * Plays the "go" sound effect after countdown
+     */
+    public static void go()
+    {
+        GreenfootSound sfxRace = new GreenfootSound("Go.mp3");
+        sfxRace.setVolume(25);
         sfxRace.play();
     }
     
