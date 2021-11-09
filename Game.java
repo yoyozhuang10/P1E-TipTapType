@@ -44,7 +44,7 @@ public class Game extends World
         super(800, 450, 1);
         setBackground(new GreenfootImage("gamebackgroundsmall.png"));
         
-        // Adds objects, display first word for user to type
+        // Add words to the screen
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
         sortWords(wordList);

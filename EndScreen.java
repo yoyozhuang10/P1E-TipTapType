@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Endscreen world
  * 
- * @author Yoyo
+ * @author Yoyo, Jayden
  * @version 2021.11.05
  */
 public class EndScreen extends World
@@ -15,6 +15,7 @@ public class EndScreen extends World
      * Constructor for objects of class EndScreen.
      * 
      */
+    
     public EndScreen()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.

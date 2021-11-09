@@ -5,7 +5,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * User can start the game by pressing space
  * 
  * @author Yoyo, Carl
- * 
  */
 public class Settings extends World
 {
@@ -67,20 +66,21 @@ public class Settings extends World
         }
     }
     
-    //Changes the difficulty level based on the button the user presses
+    /**
+     * @author - Yoyo
+     * 
+     * Changes the difficulty level based on the button pressed
+     */
     public void act(){
         if(Greenfoot.mousePressed(eb)){
             SoundEffects.clickSound();
             Game.difficulty = 1;
-            //current.setValue("Current difficulty: Easy");
         } else if (Greenfoot.mousePressed(mb)){
             SoundEffects.clickSound();
             Game.difficulty = 2;
-            //current.setValue("Current difficulty: Medium");
         } else if (Greenfoot.mousePressed(hb)){
             SoundEffects.clickSound();
             Game.difficulty = 3;
-            //current.setValue("Current difficulty: Hard");
         }
 
         //Go to game once user presses space
@@ -92,9 +92,9 @@ public class Settings extends World
     }
     
     /**
-     * @author Carl
+     * @author - Carl
      * 
-     * Method plays a background animation
+     * Plays animation to lead into game
      */
     public void playReverseAnimation()
     {    
