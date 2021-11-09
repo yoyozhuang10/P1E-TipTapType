@@ -24,7 +24,7 @@ public class Typing
     }
     
     /**
-     * @author Carl
+     * @author Carl, Yoyo
      * 
      * Base of operations for displaying typed text on stage
      */
@@ -32,8 +32,16 @@ public class Typing
     {
         if (s.equals("backspace")) // User choosing to delete something
         {
+            Game.mistakes++;
+            Game.typedChars--;
             if (Greenfoot.isKeyDown("control")) // Emulating Ctrl + backspace
             {
+                for(String str : typed){
+                    Game.mistakes++;
+                    Game.typedChars--;
+                }
+                Game.mistakes--; //Remove extra mistake added
+                Game.typedChars++; //Add the character that was removed
                 clearTyped();
             }
             else 
@@ -48,12 +56,15 @@ public class Typing
             s.equals("tab") || s.equals("alt") ||
             s.equals("alt graph") || s.equals("windows") ||
             s.equals("escape") || s.equals("space") || s.equals("undefined")
+            || s.equals("left") || s.equals("right") || s.equals ("up") ||
+            s.equals("down")
         )
         {
             // Do nothing
         }
         else // Append newly typed into string to stack
         {
+            Game.typedChars++;
             typed.push(s);
         }
         

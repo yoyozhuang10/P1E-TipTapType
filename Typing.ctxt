@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Typing
-comment0.text=\n\ Write\ a\ description\ of\ class\ Typing\ here.\n\ \n\ @author\ Carl\n\ @version\ 2021.11.05\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Typing\ here.\r\n\ \r\n\ @author\ Carl\r\n\ @version\ 2021.11.05\r\n
 comment1.params=
 comment1.target=void\ clearTyped()
-comment1.text=\n\ @author\ Carl\n\ \n\ Clears\ what\ user\ typed\n
+comment1.text=\r\n\ @author\ Carl\r\n\ \r\n\ Clears\ what\ user\ typed\r\n
 comment2.params=s
 comment2.target=java.lang.String\ type(java.lang.String)
-comment2.text=\n\ @author\ Carl\n\ \n\ Base\ of\ operations\ for\ displaying\ typed\ text\ on\ stage\n
+comment2.text=\r\n\ @author\ Carl,\ Yoyo\r\n\ \r\n\ Base\ of\ operations\ for\ displaying\ typed\ text\ on\ stage\r\n
 comment3.params=stack
 comment3.target=java.lang.String\ createString(Stack)
-comment3.text=\n\ @author\ Carl\n\ \n\ Creates\ the\ string\ (what\ user\ typed)\ by\ "gathering"/reversing\ the\ data\ stored\ in\ stack\n
+comment3.text=\r\n\ @author\ Carl\r\n\ \r\n\ Creates\ the\ string\ (what\ user\ typed)\ by\ "gathering"/reversing\ the\ data\ stored\ in\ stack\r\n
 comment4.params=
 comment4.target=java.lang.String\ getTyped()
-comment4.text=\n\ @author\ -\ Carl\n\ \n\ Method\ returns\ what\ the\ user\ currently\ typed\n
+comment4.text=\r\n\ @author\ -\ Carl\r\n\ \r\n\ Method\ returns\ what\ the\ user\ currently\ typed\r\n
 numComments=5

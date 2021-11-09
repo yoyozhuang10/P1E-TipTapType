@@ -9,8 +9,11 @@ import java.util.ArrayList;
  */
 public class Game extends World
 {
-    // Essential Variables (words variables)
-    public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores all words from words.txt
+
+    // Essential Variables
+    public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores words from words.txt
+    public static ArrayList<String> shownWords = new ArrayList<String>(); // Keeps a record of shown words
+
     Label displayedWord = new Label ("", 75); // Label that will display the word the user has to type
     Label typedWord = new Label ("", 75); // Label that displays what the user has typed
 
@@ -33,7 +36,10 @@ public class Game extends World
     public static int score;
     public static int highScore;
     public static Label currentScore;
-    
+
+    public static int mistakes = 0;
+    public static int typedChars = 0;
+
     /**
      * Constructor for objects of class Game.
      * 
@@ -123,29 +129,41 @@ public class Game extends World
      */
     public void displayWord()
     {
+        String word;
         if(difficulty == 1){
             //100% easy word split
-            displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
+            word = easyList.get(Greenfoot.getRandomNumber(easyList.size()));
+            addShownWord(word);
         } else {
             //40% easy word 60% medium word split
             int probability = Greenfoot.getRandomNumber(10);
             if(difficulty == 2){
                 if(probability < 4){
-                    displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
+                    word = easyList.get(Greenfoot.getRandomNumber(easyList.size()));
+                    addShownWord(word);
                 } else {
-                    displayedWord.setValue(mediumList.get(Greenfoot.getRandomNumber(mediumList.size())));
+                    word = easyList.get(Greenfoot.getRandomNumber(mediumList.size()));
+                    addShownWord(word);
                 }
             } else {
                 //20% easy word 20% medium word 60% hard word split
                 if(probability < 2){
-                    displayedWord.setValue(easyList.get(Greenfoot.getRandomNumber(easyList.size())));
+                    word = easyList.get(Greenfoot.getRandomNumber(easyList.size()));
+                    addShownWord(word);
                 } else if (probability < 4){
-                    displayedWord.setValue(mediumList.get(Greenfoot.getRandomNumber(mediumList.size())));
+                    word = mediumList.get(Greenfoot.getRandomNumber(mediumList.size()));
+                    addShownWord(word);
                 } else {
-                    displayedWord.setValue(hardList.get(Greenfoot.getRandomNumber(hardList.size())));
+                    word = hardList.get(Greenfoot.getRandomNumber(hardList.size()));
+                    addShownWord(word);
                 }
             }
         }
+    }
+    
+    public void addShownWord(String word){
+        shownWords.add(word);
+        displayedWord.setValue(word);
     }
 
     /**
