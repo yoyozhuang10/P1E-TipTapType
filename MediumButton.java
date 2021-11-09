@@ -27,5 +27,10 @@ public class MediumButton extends Button
     {
         mouseInteract(idle, clicked);        
         mouseHovering();
+        if(Greenfoot.isKeyDown("space"))
+        {
+            fadeOut(idle);
+            
+        }
     }
 }

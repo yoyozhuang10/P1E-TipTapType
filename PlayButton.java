@@ -13,13 +13,15 @@ public class PlayButton extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    //Clicked and idle versions of play button
     GreenfootImage clicked = new GreenfootImage("play_clicked.png");
     GreenfootImage idle = new GreenfootImage("play_idle.png");
     
+    //Scale both to size
     public PlayButton()
     {
         idle.scale(220,60);
-        clicked.scale(210,60);
+        clicked.scale(220,60);
         
         setImage(idle);
     }
@@ -30,6 +32,7 @@ public class PlayButton extends Actor
         mouseHover();
     }
     
+    //Plays animations and sound effects when button is clicked
     public void mouseClick()
     {
         if(Greenfoot.mousePressed(this))
@@ -49,6 +52,7 @@ public class PlayButton extends Actor
         }
     }
     
+    //Hover animation
     public void mouseHover()
     {
         if(Greenfoot.mouseMoved(this))
