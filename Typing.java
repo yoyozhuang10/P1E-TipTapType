@@ -24,7 +24,7 @@ public class Typing
     }
     
     /**
-     * @author Carl
+     * @author Carl, Yoyo
      * 
      * Base of operations for displaying typed text on stage
      */
@@ -41,6 +41,7 @@ public class Typing
                     Game.typedChars--;
                 }
                 Game.mistakes--; //Remove extra mistake added
+                Game.typedChars++; //Add the character that was removed
                 clearTyped();
             }
             else 
@@ -55,6 +56,8 @@ public class Typing
             s.equals("tab") || s.equals("alt") ||
             s.equals("alt graph") || s.equals("windows") ||
             s.equals("escape") || s.equals("space") || s.equals("undefined")
+            || s.equals("left") || s.equals("right") || s.equals ("up") ||
+            s.equals("down")
         )
         {
             // Do nothing

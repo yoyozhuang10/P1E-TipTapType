@@ -15,14 +15,18 @@ public class EndScreen extends World
      * Constructor for objects of class EndScreen.
      * 
      */
+    // Label variables
+    Label wpm;
+    Label errors;
     Label accuracyPercent;
+
     public EndScreen()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
         setBackground(new GreenfootImage("endbackgroundsmall.png"));
         
-        //Add score labels
+        // Add score labels
         Label gameOver = new Label("Game Over!", 75);
         Label gameOver2 = new Label("Press Space to play again", 40);
         Label score = new Label("Score: " + Game.score, 50);
@@ -33,7 +37,7 @@ public class EndScreen extends World
         addObject(highScore, x, y+150);
         
         //Add statistic labels
-        Label wpm = new Label("Words per minute: " + Game.score * 2, 25);
+        wpm = new Label("Words per minute: " + Game.score * 2, 25);
         addObject(wpm, 130, 40);
         
         Label errors = new Label("Mistakes: " + Game.mistakes, 25);
@@ -45,7 +49,12 @@ public class EndScreen extends World
  
     }
     
-    //Play again if user presses key
+    /**
+     * @author - Yoyo
+     * 
+     * Organises words based on length into different array lists
+     * @param arr - An array list of words meant to be sorted
+     */
     public void act()
     {
         if ("space".equals(Greenfoot.getKey()))
@@ -55,10 +64,19 @@ public class EndScreen extends World
         }
     }
     
-    // Calculates user accuracy
+    /**
+     * @author - Yoyo
+     * 
+     * Calculates the percent accuracy of the player based on characters
+     * they got correct
+     */
     public void calculateAccuracy(){
-        double accuracy = 100.00 - ((double)Game.mistakes/(double)Game.typedChars)*100.0;
-        double roundedAccuracy = Math.round(accuracy*100)/100;
-        accuracyPercent.setValue("Accuracy: " + roundedAccuracy);
+        if(Game.typedChars <= 0 || Game.typedChars <= Game.mistakes){
+            accuracyPercent.setValue("Accuracy: " + 0.00 + "%");
+        } else {
+            double accuracy = 100.00 - ((double)Game.mistakes/(double)Game.typedChars)*100.00;
+            double roundedAccuracy = Math.round(accuracy*100)/100;
+            accuracyPercent.setValue("Accuracy: " + roundedAccuracy + "%");
+        }
     }
 }
