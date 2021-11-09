@@ -22,16 +22,18 @@ public class EndScreen extends World
         setBackground(new GreenfootImage("endbackgroundsmall.png"));
         
         //Add score labels
-        Label gameOver = new Label("Game Over!\nPress Space to play", 75);
+        Label gameOver = new Label("Game Over!", 75);
+        Label gameOver2 = new Label("Press Space to play again", 40);
         Label score = new Label("Score: " + Game.score, 50);
         Label highScore = new Label("High Score: " + Game.highScore, 50);
-        addObject(gameOver, x, y-100);
+        addObject(gameOver, x, 100);
+        addObject(gameOver2, x, 160);
         addObject(score, x, y+50);
         addObject(highScore, x, y+150);
         
         //Add statistic labels
-        Label wpm = new Label("Words per minute: " + Game.score * 2, 20);
-        addObject(wpm, 100, 100);
+        Label wpm = new Label("Words per minute: " + Game.score * 2, 25);
+        addObject(wpm, 130, 40);
  
     }
     
