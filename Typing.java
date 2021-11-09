@@ -52,7 +52,7 @@ public class Typing
         {
             // Do nothing
         }
-        else // Append newly typed into string to be dispalyed
+        else // Append newly typed into string to stack
         {
             typed.push(s);
         }

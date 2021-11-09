@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Title actor
  * 
  * @author Jayden 
- * @version (a version number or a date)
+ * @version 2021.11.09
  */
 public class Title extends Actor
 {

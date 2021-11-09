@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EasyButton extends Button
 {
-    /**
-     * Act - do whatever the EasyButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage idle = new GreenfootImage("easyidle.png");
     GreenfootImage clicked = new GreenfootImage("easyclicked.png");
     
