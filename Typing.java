@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Typing here.
+ * Class contains methods that deal with anything involving typing for the game
  * 
  * @author Carl
  * @version 2021.11.05

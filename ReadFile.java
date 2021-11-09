@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.io.*; // Used for file reading
 
 /**
- * Class used for word extracting and processing
+ * Class used for word extracting
  * 
- * @author Carl Wang
+ * @author Carl
  * @version 2021.11.06
  */
 public class ReadFile  
@@ -13,7 +13,7 @@ public class ReadFile
     /**
      * @author - Carl
      * 
-     * Method accesses words.txt and stores all entries into wordList ArrayList
+     * Method accesses Words.txt and stores all entries into an ArrayList called wordList 
      */
     public static ArrayList<String> extractWords()
     {
@@ -32,7 +32,7 @@ public class ReadFile
         }
         catch (FileNotFoundException e)
         {
-            System.out.println("Something went wrong while trying to read Words.txt");
+            System.out.println("Something went wrong while trying to read Words.txt.");
         }
         return output;
     }

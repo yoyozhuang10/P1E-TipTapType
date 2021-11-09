@@ -4,16 +4,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Create a settings menu where the user can toggle game difficulty
  * User can start the game by pressing space
  * 
- * @author Yoyo 
+ * @author Yoyo, Carl
  * 
  */
 public class Settings extends World
 {
-
-    /**
-     * Constructor for objects of class Settings.
-     * 
-     */
     //Button variables
     EasyButton eb = new EasyButton();
     MediumButton mb = new MediumButton();
@@ -23,6 +18,10 @@ public class Settings extends World
     Label current;
     Label message = new Label ("Press Space to Begin", 25);
 
+    /**
+     * Constructor for objects of class Settings.
+     * 
+     */
     public Settings()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
@@ -44,24 +43,10 @@ public class Settings extends World
         addObject(select, getWidth() / 2, 80);
         
         //Add difficulty toggle buttons
-        
         int buttonHeight = 185;
         addObject(eb, getWidth() / 4, buttonHeight);
         addObject(mb, getWidth() / 2, buttonHeight);
-        addObject(hb, getWidth() / 4 * 3, buttonHeight);
-        
-        /**
-         *  Add labels to buttons
-            Label easy = new Label("Easy", 40);
-            addObject(easy, getWidth() / 4, 300);
-            
-            Label medium = new Label("Medium", 40);
-            addObject(medium, getWidth() / 2, 300);
-            
-            Label hard = new Label("Hard", 40);
-            addObject(hard, getWidth() / 4 * 3, 300);
-         */
-            
+        addObject(hb, getWidth() / 4 * 3, buttonHeight);           
         
         //Add message telling user how to continue
         addObject(message, getWidth()/2, 400);
@@ -106,6 +91,11 @@ public class Settings extends World
         }
     }
     
+    /**
+     * @author Carl
+     * 
+     * Method plays a background animation
+     */
     public void playReverseAnimation()
     {    
         removeObjects(getObjects(null)); // Remove all objects
@@ -115,10 +105,5 @@ public class Settings extends World
             Greenfoot.delay(1);
             setBackground(MainMenu.arr[i]);
         }
-    }
-
-    public void print(Object x)
-    {
-        System.out.println(x);
     }
 }

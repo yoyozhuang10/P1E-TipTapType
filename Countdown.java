@@ -63,9 +63,4 @@ public class Countdown extends World
         Typing.clearTyped(); // What user didn't finish typing
         Greenfoot.setWorld(g);
     }
-
-    public void print(Object x)
-    {
-        System.out.println(x);
-    }
 }

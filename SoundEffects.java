@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * Class handles sound effects
  * 
- * @author Carl 
+ * @author Carl, Yoyo
  * @version 2021.11.06
  */
 public class SoundEffects  

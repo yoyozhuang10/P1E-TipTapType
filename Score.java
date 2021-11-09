@@ -1,5 +1,5 @@
 /**
- * Write a description of class Score here.
+ * Java class contains methods that deals with game sccores
  * 
  * @author Yoyo, Carl
  * @version 2021.11.06

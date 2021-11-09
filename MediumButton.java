@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MediumButton here.
+ * Bedium difficulty button actor
  * 
  * @author Jayden
  * @version 2021.11.08
@@ -22,7 +22,6 @@ public class MediumButton extends Button
         setImage(idle);
     }
         
-    
     public void act()
     {
         mouseInteract(idle, clicked);        

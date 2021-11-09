@@ -9,8 +9,8 @@ import java.util.ArrayList;
  */
 public class Game extends World
 {
-    // Essential Variables
-    public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores words from words.txt
+    // Essential Variables (words variables)
+    public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores all words from words.txt
     Label displayedWord = new Label ("", 75); // Label that will display the word the user has to type
     Label typedWord = new Label ("", 75); // Label that displays what the user has typed
 
@@ -34,7 +34,6 @@ public class Game extends World
     public static int highScore;
     public static Label currentScore;
     
-    
     /**
      * Constructor for objects of class Game.
      * 
@@ -45,6 +44,7 @@ public class Game extends World
         super(800, 450, 1);
         setBackground(new GreenfootImage("gamebackgroundsmall.png"));
         
+        // Adds objects, display first word for user to type
         addObject(displayedWord, x, y+100);
         addObject(typedWord, x, y);
         sortWords(wordList);
@@ -72,21 +72,21 @@ public class Game extends World
             String typed = "";
             if (!keyPress.equals(null)) // The user has typed something
             {
-                typed = Typing.type(keyPress);
+                typed = Typing.type(keyPress); // Update the program what user typed
                 SoundEffects.keyPressSound();
-                showTyped(typed);
+                showTyped(typed); // Update display what user typed
             }
         }
         catch (Exception NullPointerException){} // Ignore error to allow the game to run
 
-    // Check if user typed the word correctly
+        // Check if user typed the word correctly
         if (checkCorrect(displayedWord.getValue(), typedWord.getValue()))
         {
             // User has typed correct word
             updateScore();
             displayWord(); // Display new word
-            Typing.clearTyped();
-            showTyped(Typing.getTyped()); // Clear what the user has typed
+            Typing.clearTyped(); // Tell the program to clear what user typed
+            showTyped(Typing.getTyped()); // Clear what the user has typed on display
             SoundEffects.dingSound();
         }  
 
@@ -99,7 +99,7 @@ public class Game extends World
     }
     
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Organises words based on length into different array lists
      * @param arr - An array list of words meant to be sorted
@@ -117,7 +117,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Displays/updates the word the user will type
      */
@@ -149,7 +149,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Carl
+     * @author Carl
      * 
      * Checks if the displayed word matches with what the user has typed
      * @param displayed - The word that is displayed
@@ -169,7 +169,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Carl
+     * @author Carl
      * 
      * Method will display/update what the user has currently typed
      * @param item - What the user has currently typed
@@ -180,7 +180,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Update timer value on screen
      */
@@ -190,7 +190,7 @@ public class Game extends World
     }
 
     /**
-     * @author - Yoyo
+     * @author Yoyo
      * 
      * Update score label and increases score by 1
      */
