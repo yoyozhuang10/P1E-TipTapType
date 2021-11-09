@@ -37,7 +37,8 @@ public class PlayButton extends Actor
             SoundEffects.clickSound();
             setImage(clicked);
             setLocation(getX(), getY() + 5);
-            Greenfoot.delay(4);
+            Greenfoot.delay(1);
+            setImage(idle);
             setLocation(getX(), getY() - 5);
             Typing.clearTyped();
             Greenfoot.setWorld(new Settings());

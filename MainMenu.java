@@ -29,7 +29,7 @@ public class MainMenu extends World
     
     public void act()
     {
-	    // Play the opening animation once
+        // Play the opening animation once
         if (!animation)
         {
             playAnimation();
@@ -73,8 +73,11 @@ public class MainMenu extends World
      */
     public void addObject()
     {
+        Title title = new Title();
+        addObject(title, x, 150);
+        
         PlayButton play = new PlayButton();
-        addObject(play, x, y);
+        addObject(play, x, 300);
     }
 
     // For debugging purposes
