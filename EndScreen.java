@@ -15,7 +15,7 @@ public class EndScreen extends World
      * Constructor for objects of class EndScreen.
      * 
      */
-    
+    Label accuracyPercent;
     public EndScreen()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
@@ -35,6 +35,13 @@ public class EndScreen extends World
         //Add statistic labels
         Label wpm = new Label("Words per minute: " + Game.score * 2, 25);
         addObject(wpm, 130, 40);
+        
+        Label errors = new Label("Mistakes: " + Game.mistakes, 25);
+        addObject(errors, 130, 60);
+        
+        accuracyPercent = new Label("Accuracy: ", 25);
+        calculateAccuracy();
+        addObject(accuracyPercent, 130, 80);
  
     }
     
@@ -46,5 +53,12 @@ public class EndScreen extends World
             Countdown cd = new Countdown();
             Greenfoot.setWorld(cd);
         }
+    }
+    
+    // Calculates user accuracy
+    public void calculateAccuracy(){
+        double accuracy = 100.00 - ((double)Game.mistakes/(double)Game.typedChars)*100.0;
+        double roundedAccuracy = Math.round(accuracy*100)/100;
+        accuracyPercent.setValue("Accuracy: " + roundedAccuracy);
     }
 }

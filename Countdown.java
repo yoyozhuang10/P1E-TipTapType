@@ -78,7 +78,10 @@ public class Countdown extends World
         Game g = new Game();
         // Reset Everything
         Game.score = -1; // Score, set to -1 since updateScore() increases score by 1
+        Game.mistakes = 0; // Set mistakes to 0
+        Game.typedChars = 0;
         Game.updateScore(); // Scoreboard
+        Game.shownWords.clear(); // Resets shown words
         Typing.clearTyped(); // What user didn't finish typing
         Greenfoot.setWorld(g);
     }

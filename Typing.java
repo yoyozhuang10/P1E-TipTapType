@@ -32,8 +32,15 @@ public class Typing
     {
         if (s.equals("backspace")) // User choosing to delete something
         {
+            Game.mistakes++;
+            Game.typedChars--;
             if (Greenfoot.isKeyDown("control")) // Emulating Ctrl + backspace
             {
+                for(String str : typed){
+                    Game.mistakes++;
+                    Game.typedChars--;
+                }
+                Game.mistakes--; //Remove extra mistake added
                 clearTyped();
             }
             else 
@@ -54,6 +61,7 @@ public class Typing
         }
         else // Append newly typed into string to be dispalyed
         {
+            Game.typedChars++;
             typed.push(s);
         }
         
