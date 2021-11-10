@@ -44,7 +44,7 @@ public class PlayButton extends Actor
             setImage(idle);
             setLocation(getX(), getY() - 5);
             Typing.clearTyped();
-            Greenfoot.setWorld(new Settings());
+            Greenfoot.setWorld(new HowToPlay());
         }
         else
         {

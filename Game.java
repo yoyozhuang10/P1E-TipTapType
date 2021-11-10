@@ -28,7 +28,7 @@ public class Game extends World
     int y = getHeight()/2;
 
     // Timer variables
-    int totalTime = 30;
+    int totalTime = 10;
     SimpleTimer t = new SimpleTimer();
     Counter c = new Counter();
 
