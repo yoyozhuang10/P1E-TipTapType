@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TrapButton
-comment0.text=\r\n\ This\ button\ is\ used\ to\ prevent\ an\ annoying\ bug\ found\ when\ testing.\r\n\ What\ happened\ was\ that\ greenfoot\ was\ making\ the\ first\ added\ object\r\n\ in\ the\ world\ Settings\ invisible.\ \r\n\ \r\n\ This\ TrapButton\ is\ made\ so\ that\ it\ would\ be\ the\ first\ added\ object,\r\n\ therefore\ being\ invisible,\ to\ allow\ the\ essential\ buttons\ to\ be\ visible\r\n\ when\ adding\ them\ to\ the\ world\ Settings\r\n\ \r\n\ Code\ here\ is\ redundant\ to\ the\ program,\ only\ to\ fix\ a\ bug\r\n\ \r\n\ @author\ Carl\r\n\ @version\ 2021.11.10\r\n
+comment0.text=\n\ This\ button\ is\ used\ to\ prevent\ an\ annoying\ bug\ found\ when\ testing.\n\ What\ happened\ was\ that\ greenfoot\ was\ making\ the\ first\ added\ object\n\ in\ the\ world\ Settings\ invisible.\ \n\ \n\ This\ TrapButton\ is\ made\ so\ that\ it\ would\ be\ the\ first\ added\ object,\n\ therefore\ being\ invisible,\ to\ allow\ the\ essential\ buttons\ to\ be\ visible\n\ when\ adding\ them\ to\ the\ world\ Settings\n\ \n\ Code\ here\ is\ redundant\ to\ the\ program,\ only\ to\ fix\ a\ bug\n\ \n\ @author\ Carl\n\ @version\ 2021.11.10\n
 comment1.params=
 comment1.target=TrapButton()
 comment2.params=

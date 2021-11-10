@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=EndScreen
-comment0.text=\r\n\ Endscreen\ world\r\n\ \r\n\ @author\ Yoyo,\ Jayden\r\n\ @version\ 2021.11.05\r\n
+comment0.text=\n\ Endscreen\ world\n\ \n\ @author\ Yoyo,\ Jayden\n\ @version\ 2021.11.05\n
 comment1.params=
 comment1.target=EndScreen()
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ @author\ -\ Yoyo\r\n\ \r\n\ Organises\ words\ based\ on\ length\ into\ different\ array\ lists\r\n\ @param\ arr\ -\ An\ array\ list\ of\ words\ meant\ to\ be\ sorted\r\n
+comment2.text=\n\ @author\ -\ Yoyo\n\ \n\ Organises\ words\ based\ on\ length\ into\ different\ array\ lists\n\ @param\ arr\ -\ An\ array\ list\ of\ words\ meant\ to\ be\ sorted\n
 comment3.params=
 comment3.target=void\ calculateAccuracy()
-comment3.text=\r\n\ @author\ -\ Yoyo\r\n\ \r\n\ Calculates\ the\ percent\ accuracy\ of\ the\ player\ based\ on\ characters\r\n\ they\ got\ correct\r\n
+comment3.text=\n\ @author\ -\ Yoyo\n\ \n\ Calculates\ the\ percent\ accuracy\ of\ the\ player\ based\ on\ characters\n\ they\ got\ correct\n
 numComments=4

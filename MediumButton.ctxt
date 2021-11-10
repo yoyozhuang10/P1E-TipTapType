@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MediumButton
-comment0.text=\r\n\ Medium\ difficulty\ button\ actor\r\n\ \r\n\ @author\ Jayden\r\n\ @version\ 2021.11.08\r\n
+comment0.text=\n\ Medium\ difficulty\ button\ actor\n\ \n\ @author\ Jayden\n\ @version\ 2021.11.08\n
 comment1.params=
 comment1.target=MediumButton()
 comment2.params=

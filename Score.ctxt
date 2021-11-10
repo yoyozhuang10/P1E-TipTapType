@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Score
-comment0.text=\r\n\ Java\ class\ contains\ methods\ that\ deals\ with\ game\ sccores\r\n\ \r\n\ @author\ Yoyo,\ Carl\r\n\ @version\ 2021.11.06\r\n
+comment0.text=\n\ Java\ class\ contains\ methods\ that\ deals\ with\ game\ sccores\n\ \n\ @author\ Yoyo,\ Carl\n\ @version\ 2021.11.06\n
 comment1.params=
 comment1.target=int\ getScore()
-comment1.text=\r\n\ @author\ Yoyo,\ Carl\r\n\ \r\n\ Returns\ the\ user's\ score\r\n
+comment1.text=\n\ @author\ Yoyo,\ Carl\n\ \n\ Returns\ the\ user's\ score\n
 comment2.params=
 comment2.target=void\ calculateHighScore()
-comment2.text=\r\n\ @author\ Carl\r\n\ \r\n\ Calculates\ and\ sets\ the\ high\ score\r\n
+comment2.text=\n\ @author\ Carl\n\ \n\ Calculates\ and\ sets\ the\ high\ score\n
 numComments=3
