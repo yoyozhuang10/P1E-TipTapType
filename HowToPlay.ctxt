@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=HowToPlay
-comment0.text=\n\ Show\ instructions\ to\ user\ before\ they\ play\ the\ game\n\ \n\ @author\ Yoyo\n\ @version\ 2021.11.10\n
+comment0.text=\r\n\ Show\ instructions\ to\ user\ before\ they\ play\ the\ game\r\n\ \r\n\ @author\ Yoyo\r\n\ @version\ 2021.11.10\r\n
 comment1.params=
 comment1.target=HowToPlay()
 comment2.params=

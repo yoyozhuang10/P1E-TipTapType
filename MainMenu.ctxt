@@ -1,17 +1,17 @@
 #BlueJ class context
 comment0.target=MainMenu
-comment0.text=\n\ World\ where\ user\ presses\ space\ to\ start\ the\ game\n\ \n\ @author\ Carl,\ Jayden\n\ @version\ 2021.11.05\n
+comment0.text=\r\n\ World\ where\ user\ presses\ space\ to\ start\ the\ game\r\n\ \r\n\ @author\ Carl,\ Jayden\r\n\ @version\ 2021.11.05\r\n
 comment1.params=
 comment1.target=MainMenu()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ createImages()
-comment3.text=\n\ @author\ Carl\n\ \n\ Creates\ an\ array\ of\ GreenfootImages\ to\ be\ used\ for\ background\ animation\n
+comment3.text=\r\n\ @author\ Carl\r\n\ \r\n\ Creates\ an\ array\ of\ GreenfootImages\ to\ be\ used\ for\ background\ animation\r\n
 comment4.params=
 comment4.target=void\ playAnimation()
-comment4.text=\n\ @author\ Carl\n\ \n\ Plays\ the\ animation\ (forward\ animation)\n
+comment4.text=\r\n\ @author\ Carl\r\n\ \r\n\ Plays\ the\ animation\ (forward\ animation)\r\n
 comment5.params=
 comment5.target=void\ addObject()
-comment5.text=\n\ @author\ Carl,\ Jayden\n\ \n\ Adds\ the\ play\ button\ and\ title\ screen\n
+comment5.text=\r\n\ @author\ Carl,\ Jayden\r\n\ \r\n\ Adds\ the\ play\ button\ and\ title\ screen\r\n
 numComments=6

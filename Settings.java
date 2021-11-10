@@ -42,7 +42,6 @@ public class Settings extends World
         
         //Add buttons
         int buttonHeight = 185;
-        addObject(new TrapButton(),-500,-500); // Because greenfoot was hiding the first object for some reason
         addObject(eb, getWidth() / 4, buttonHeight);
         addObject(mb, getWidth() / 2, buttonHeight);
         addObject(hb, getWidth() / 4 * 3, buttonHeight); 
