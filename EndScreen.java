@@ -25,7 +25,7 @@ public class EndScreen extends World
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
-        GreenfootImage background = new GreenfootImage("endbackground2.png");
+        GreenfootImage background = new GreenfootImage("endbackground3.png");
         background.scale(800,450);
         setBackground(background);
         
@@ -36,19 +36,19 @@ public class EndScreen extends World
         Label highScore = new Label("High Score: " + Game.highScore, 50);
         addObject(gameOver, x, 100);
         addObject(gameOver2, x, 160);
-        addObject(score, x, y+50);
-        addObject(highScore, x, y+150);
+        addObject(score, 220, y+50);
+        addObject(highScore, 220, y+150);
         
         //Add statistic labels
-        wpm = new Label("Words per minute: " + Game.score * 2, 25);
-        addObject(wpm, 130, 40);
+        wpm = new Label("Words per minute: " + Game.score * 2, 30);
+        addObject(wpm, 585, 290);
         
-        Label errors = new Label("Mistakes: " + Game.mistakes, 25);
-        addObject(errors, 130, 60);
+        Label errors = new Label("Mistakes: " + Game.mistakes, 30);
+        addObject(errors, 585, 330);
         
-        accuracyPercent = new Label("Accuracy: ", 25);
+        accuracyPercent = new Label("Accuracy: ", 30);
         calculateAccuracy();
-        addObject(accuracyPercent, 130, 80);
+        addObject(accuracyPercent, 585, 370);
  
     }
     
