@@ -19,13 +19,16 @@ public class HowToPlay extends World
         super(800, 450, 1); 
         
         // Set background
-        GreenfootImage background = new GreenfootImage("main (193).png");
+        GreenfootImage background = new GreenfootImage("instructions.png");
+        background.scale(800,450);
         setBackground(background);
         
         // Display instructions
+        /**
+         * 
         Label instructions = new Label("Instructions", 60);
         addObject(instructions, getWidth() / 2, 80);
-        
+       
         Label rule1 = new Label("1) A random word will pop up on screen", 40);
         addObject(rule1, getWidth() / 2, 140);
         
@@ -37,9 +40,13 @@ public class HowToPlay extends World
         
         Label rule4 = new Label("4) HAVE FUN!!!", 40);
         addObject(rule4, getWidth() / 2, 340);
-        
+        */
+       
         Label rule5 = new Label("Press space to continue", 25);
-        addObject(rule5, getWidth() / 2, 400);
+        addObject(rule5, getWidth() / 2, 425);
+         
+        
+        
     }
     
     public void act(){
