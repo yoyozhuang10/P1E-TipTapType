@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Bedium difficulty button actor
+ * Medium difficulty button actor
  * 
  * @author Jayden
  * @version 2021.11.08
