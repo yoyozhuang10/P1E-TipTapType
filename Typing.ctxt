@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Typing
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Typing\ here.\r\n\ \r\n\ @author\ Carl\r\n\ @version\ 2021.11.05\r\n
+comment0.text=\r\n\ Class\ contains\ methods\ that\ deal\ with\ anything\ involving\ typing\ for\ the\ game\r\n\ \r\n\ @author\ Carl\r\n\ @version\ 2021.11.05\r\n
 comment1.params=
 comment1.target=void\ clearTyped()
 comment1.text=\r\n\ @author\ Carl\r\n\ \r\n\ Clears\ what\ user\ typed\r\n

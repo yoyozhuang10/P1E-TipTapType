@@ -25,7 +25,9 @@ public class EndScreen extends World
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
-        setBackground(new GreenfootImage("endbackgroundsmall.png"));
+        GreenfootImage background = new GreenfootImage("endbackground2.png");
+        background.scale(800,450);
+        setBackground(background);
         
         // Add score labels
         Label gameOver = new Label("Game Over!", 75);

@@ -16,7 +16,7 @@ public class Countdown extends World
     Label count;
     
     /**
-     * @author - Yoyo
+     * @author - Yoyo, Jayden
      * 
      * Creates a world with for the countdown
      */
@@ -24,7 +24,12 @@ public class Countdown extends World
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
-        setBackground(new GreenfootImage("gamebackgroundsmall.png"));
+        
+        //Define and resize backgrounds
+        GreenfootImage background = new GreenfootImage("countdownbackground2.png");
+        background.scale(800,450);
+        setBackground(background);
+        
         
         //Add counter label to screen
         count = new Label((int)counter, 60);
@@ -60,6 +65,11 @@ public class Countdown extends World
         }
         count.setValue("GO!");
         SoundEffects.go();
+        
+        GreenfootImage go = new GreenfootImage("background2.png");
+        go.scale(800,450);
+        setBackground(go);
+        
         Greenfoot.delay(30);
         switchWorld();
     }

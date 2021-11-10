@@ -48,7 +48,9 @@ public class Game extends World
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
         super(800, 450, 1);
-        setBackground(new GreenfootImage("gamebackgroundsmall.png"));
+        GreenfootImage background = new GreenfootImage("gamebackground2.png");
+        background.scale(800,450);
+        setBackground(background);
         
         // Add words to the screen
         addObject(displayedWord, x, y+100);
