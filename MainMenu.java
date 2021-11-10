@@ -15,11 +15,7 @@ public class MainMenu extends World
     // Background animation
     static GreenfootImage[] arr = new GreenfootImage[100];
     boolean animation = false;
-    
-    /**
-     * Constructor for objects of class MainMenu.
-     * 
-     */
+
     public MainMenu()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.

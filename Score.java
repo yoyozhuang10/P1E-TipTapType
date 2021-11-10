@@ -20,7 +20,7 @@ public class Score
     /**
      * @author Carl
      * 
-     * Calculates the high score
+     * Calculates and sets the high score
      */
     public static void calculateHighScore()
     {

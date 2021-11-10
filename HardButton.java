@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class HardButton extends Button
 {
-    /**
-     * Act - do whatever the HardButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     GreenfootImage idle = new GreenfootImage("hardidle.png");
     GreenfootImage clicked = new GreenfootImage("hardclicked.png");
     

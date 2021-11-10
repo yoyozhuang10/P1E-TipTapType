@@ -10,7 +10,7 @@ PURPOSE OF PROJECT: Create an interactive typing game using data structures
 
 VERSION or DATE: 2021.11.08
 
-HOW TO START THIS PROJECT: Load the world MainMenu and press the run button
+HOW TO START THIS PROJECT: Load/create the world MainMenu and press the run button
 
 AUTHORS: Jayden, Yoyo, Carl
 

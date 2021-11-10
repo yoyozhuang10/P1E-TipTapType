@@ -25,7 +25,6 @@ public class MediumButton extends Button
         if(Greenfoot.isKeyDown("space"))
         {
             fadeOut(idle);
-            
         }
     }
 }

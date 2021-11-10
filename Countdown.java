@@ -30,7 +30,6 @@ public class Countdown extends World
         background.scale(800,450);
         setBackground(background);
         
-        
         //Add counter label to screen
         count = new Label((int)counter, 60);
         addObject(count, getWidth() / 2, getHeight() / 2);
@@ -57,15 +56,19 @@ public class Countdown extends World
      * Displays a 3, 2, 1, Start! countdown, plays music too
      */
     public void countdown(){
+        // Displaying 3, 2, 1
         for (int i = 3; i > 0; i--)
         {
             count.setValue(i);
             SoundEffects.countdown();
             Greenfoot.delay(60);
         }
+        
+        // Displaying Go
         count.setValue("GO!");
         SoundEffects.go();
         
+        // Changes background so that the square holding the numbers is gone
         GreenfootImage go = new GreenfootImage("background2.png");
         go.scale(800,450);
         setBackground(go);

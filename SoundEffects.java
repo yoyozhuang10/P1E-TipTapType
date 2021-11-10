@@ -70,11 +70,12 @@ public class SoundEffects
     /**
      * @author Carl
      * 
-     * Plays music in the background. Moves from tracks 1-3
+     * Plays music in the background. Music in background is determined
+     * by a random number generator
      */
     public static void playMusic()
     {
-        String song = "Track " + rand() + ".mp3";
+        String song = "Track " + rand() + ".mp3"; 
         GreenfootSound track = new GreenfootSound(song);
         track.playLoop();
         track.setVolume(50);

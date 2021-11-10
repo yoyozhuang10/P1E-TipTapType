@@ -40,9 +40,10 @@ public class Label extends Actor
     }
 
     /**
-     * @author - Carl
+     * @author Carl
      * 
      * Gets the current value
+     * @return - The value the label contains
      */
     public String getValue()
     {

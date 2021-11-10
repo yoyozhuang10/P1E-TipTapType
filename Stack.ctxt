@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Stack
-comment0.text=\n\ @author\ Mr\ Chan\n\ \n\ The\ stack\ class\ we\ learned\ about\ in\ class\n
+comment0.text=\r\n\ @author\ Mr\ Chan\r\n\ \r\n\ The\ stack\ class\ we\ learned\ about\ in\ class\r\n
 comment1.params=
 comment1.target=boolean\ isEmpty()
 comment2.params=item

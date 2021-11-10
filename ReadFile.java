@@ -13,7 +13,8 @@ public class ReadFile
     /**
      * @author - Carl
      * 
-     * Method accesses Words.txt and stores all entries into an ArrayList called wordList 
+     * Method accesses Words.txt and stores all entries into an 
+     * ArrayList called wordList 
      */
     public static ArrayList<String> extractWords()
     {

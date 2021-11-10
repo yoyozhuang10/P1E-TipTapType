@@ -8,14 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EasyButton extends Button
 {
-    GreenfootImage idle = new GreenfootImage("easyidle.png");
+    static GreenfootImage idle = new GreenfootImage("easyidle.png");
     GreenfootImage clicked = new GreenfootImage("easyclicked.png");
     
     public EasyButton()
     {
         idle.scale(160,45);
         clicked.scale(160,45);
-        setImage(idle);
     }     
     
     public void act()

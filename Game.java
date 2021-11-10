@@ -9,7 +9,6 @@ import java.util.ArrayList;
  */
 public class Game extends World
 {
-
     // Essential Variables
     public static ArrayList<String> wordList = ReadFile.extractWords(); // Stores words from words.txt
     public static ArrayList<String> shownWords = new ArrayList<String>(); // Keeps a record of shown words
@@ -28,7 +27,7 @@ public class Game extends World
     int y = getHeight()/2;
 
     // Timer variables
-    int totalTime = 10;
+    int totalTime = 30; // In seconds
     SimpleTimer t = new SimpleTimer();
     Counter c = new Counter();
 
@@ -41,10 +40,6 @@ public class Game extends World
     public static int mistakes = 0;
     public static int typedChars = 0;
 
-    /**
-     * Constructor for objects of class Game.
-     * 
-     */
     public Game()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.

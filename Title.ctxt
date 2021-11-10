@@ -1,8 +1,6 @@
 #BlueJ class context
 comment0.target=Title
-comment0.text=\n\ Title\ actor\n\ \n\ @author\ Jayden\ \n\ @version\ 2021.11.09\n
+comment0.text=\r\n\ Title\ actor\r\n\ \r\n\ @author\ Jayden\ \r\n\ @version\ 2021.11.09\r\n
 comment1.params=
 comment1.target=Title()
-comment2.params=
-comment2.target=void\ act()
-numComments=3
+numComments=2

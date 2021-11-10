@@ -7,12 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2021.11.08
  */
 public class PlayButton extends Actor
-{
-    /**
-     * Act - do whatever the PlayButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
+{   
     //Clicked and idle versions of play button
     GreenfootImage clicked = new GreenfootImage("play_clicked.png");
     GreenfootImage idle = new GreenfootImage("play_idle.png");

@@ -10,11 +10,6 @@ public class EndScreen extends World
 {
     int x = getWidth()/2; 
     int y = getHeight()/2;
-    
-    /**
-     * Constructor for objects of class EndScreen.
-     * 
-     */
 
     // Label variables
     Label wpm;

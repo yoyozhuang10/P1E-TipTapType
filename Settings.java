@@ -17,10 +17,6 @@ public class Settings extends World
     Label current;
     Label message = new Label ("Press Space to Begin", 25);
 
-    /**
-     * Constructor for objects of class Settings.
-     * 
-     */
     public Settings()
     {    
         // Create a new world with 800x450 cells with a cell size of 1x1 pixels.
@@ -41,18 +37,15 @@ public class Settings extends World
         Label select = new Label("Please select your level of difficulty", 40);
         addObject(select, getWidth() / 2, 80);
         
-        //Add difficulty toggle buttons
-        int buttonHeight = 185;
-        addObject(eb, getWidth() / 4, buttonHeight);
-        addObject(mb, getWidth() / 2, buttonHeight);
-        addObject(hb, getWidth() / 4 * 3, buttonHeight);           
-        
         //Add message telling user how to continue
         addObject(message, getWidth()/2, 400);
         
-        String trap = Greenfoot.getKey(); 
-        // Above line is essential code to prevent bug where if user is spamming space in the main menu
-        // and then pressing the play button, the user will have no opportunity to choose difficulty.
+        //Add buttons
+        int buttonHeight = 185;
+        addObject(new TrapButton(),-500,-500); // Because greenfoot was hiding the first object for some reason
+        addObject(eb, getWidth() / 4, buttonHeight);
+        addObject(mb, getWidth() / 2, buttonHeight);
+        addObject(hb, getWidth() / 4 * 3, buttonHeight); 
     }
     
     //Returns the current difficulty level
@@ -71,7 +64,7 @@ public class Settings extends World
      * 
      * Changes the difficulty level based on the button pressed
      */
-    public void act(){
+    public void act(){       
         if(Greenfoot.mousePressed(eb)){
             SoundEffects.clickSound();
             Game.difficulty = 1;
