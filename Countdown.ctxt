@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Countdown
-comment0.text=\r\n\ Plays\ a\ short\ countdown\ before\ the\ game\ starts\r\n\ \r\n\ @author\ Yoyo,\ Carl\r\n\ @version\ 2021.11.08\r\n
+comment0.text=\n\ Plays\ a\ short\ countdown\ before\ the\ game\ starts\n\ \n\ @author\ Yoyo,\ Carl\n\ @version\ 2021.11.08\n
 comment1.params=
 comment1.target=Countdown()
-comment1.text=\r\n\ @author\ -\ Yoyo,\ Jayden\r\n\ \r\n\ Creates\ a\ world\ with\ for\ the\ countdown\r\n
+comment1.text=\n\ @author\ -\ Yoyo,\ Jayden\n\ \n\ Creates\ a\ world\ with\ for\ the\ countdown\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ @author\ -\ Carl\r\n\ \r\n\ Executes\ countdown\ once\r\n
+comment2.text=\n\ @author\ -\ Carl\n\ \n\ Executes\ countdown\ once\n
 comment3.params=
 comment3.target=void\ countdown()
-comment3.text=\r\n\ @author\ -\ Carl,\ Yoyo\r\n\ \r\n\ Displays\ a\ 3,\ 2,\ 1,\ Start\!\ countdown,\ plays\ music\ too\r\n
+comment3.text=\n\ @author\ -\ Carl,\ Yoyo\n\ \n\ Displays\ a\ 3,\ 2,\ 1,\ Start\!\ countdown,\ plays\ music\ too\n
 comment4.params=
 comment4.target=void\ switchWorld()
-comment4.text=\r\n\ @author\ -\ Yoyo\r\n\ \r\n\ Switch\ world\ to\ game\ world\ after\ countdown\ plays\ \ \ \ \r\n
+comment4.text=\n\ @author\ -\ Yoyo\n\ \n\ Switch\ world\ to\ game\ world\ after\ countdown\ plays\ \ \ \ \n
 numComments=5

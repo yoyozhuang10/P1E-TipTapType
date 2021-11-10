@@ -1,15 +1,15 @@
 #BlueJ class context
 comment0.target=Settings
-comment0.text=\r\n\ Create\ a\ settings\ menu\ where\ the\ user\ can\ toggle\ game\ difficulty\r\n\ User\ can\ start\ the\ game\ by\ pressing\ space\r\n\ \r\n\ @author\ Yoyo,\ Carl\r\n
+comment0.text=\n\ Create\ a\ settings\ menu\ where\ the\ user\ can\ toggle\ game\ difficulty\n\ User\ can\ start\ the\ game\ by\ pressing\ space\n\ \n\ @author\ Yoyo,\ Carl\n
 comment1.params=
 comment1.target=Settings()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Settings.\r\n\ \r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Settings.\n\ \n
 comment2.params=
 comment2.target=java.lang.String\ currentDifficulty()
 comment3.params=
 comment3.target=void\ act()
-comment3.text=\r\n\ @author\ -\ Yoyo\r\n\ \r\n\ Changes\ the\ difficulty\ level\ based\ on\ the\ button\ pressed\r\n
+comment3.text=\n\ @author\ -\ Yoyo\n\ \n\ Changes\ the\ difficulty\ level\ based\ on\ the\ button\ pressed\n
 comment4.params=
 comment4.target=void\ playReverseAnimation()
-comment4.text=\r\n\ @author\ -\ Carl\r\n\ \r\n\ Plays\ animation\ to\ lead\ into\ game\r\n
+comment4.text=\n\ @author\ -\ Carl\n\ \n\ Plays\ animation\ to\ lead\ into\ game\n
 numComments=5
