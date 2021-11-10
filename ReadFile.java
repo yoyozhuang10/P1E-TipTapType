@@ -25,7 +25,7 @@ public class ReadFile
             
             while (scanner.hasNextLine())
             {
-                output.add(scanner.nextLine()); // .txt -> ArrayList
+                output.add(scanner.nextLine().toLowerCase()); // .txt -> ArrayList
             }
             
             scanner.close(); // Destroy scanner

@@ -37,6 +37,7 @@ public class Game extends World
     public static int highScore;
     public static Label currentScore;
 
+    // Accuracy variables
     public static int mistakes = 0;
     public static int typedChars = 0;
 
@@ -163,6 +164,12 @@ public class Game extends World
         }
     }
     
+    /**
+     * @author Yoyo
+     * 
+     * Adds word to list of shown words and change display
+     * @param word - the word meant to be added
+     */
     public void addShownWord(String word){
         shownWords.add(word);
         displayedWord.setValue(word);

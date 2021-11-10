@@ -2,6 +2,8 @@ import java.util.Iterator;
 
 /**
  * @author Mr Chan
+ * 
+ * The stack class we learned about in class
  */
 public class Stack<E> implements Iterable<E>
 {

@@ -77,7 +77,7 @@ public class EndScreen extends World
         if(Game.typedChars <= 0 || Game.typedChars <= Game.mistakes){
             accuracyPercent.setValue("Accuracy: " + 0.00 + "%");
         } else {
-            double accuracy = 100.00 - ((double)Game.mistakes/(double)Game.typedChars)*100.00;
+            double accuracy = 100.00 - (double)((double)Game.mistakes/(double)Game.typedChars)*100.00;
             double roundedAccuracy = Math.round(accuracy*100)/100;
             accuracyPercent.setValue("Accuracy: " + roundedAccuracy + "%");
         }

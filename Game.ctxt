@@ -15,6 +15,7 @@ comment4.target=void\ displayWord()
 comment4.text=\r\n\ @author\ Yoyo\r\n\ \r\n\ Displays/updates\ the\ word\ the\ user\ will\ type\r\n
 comment5.params=word
 comment5.target=void\ addShownWord(java.lang.String)
+comment5.text=\r\n\ @author\ Yoyo\r\n\ \r\n\ Adds\ word\ to\ list\ of\ shown\ words\ and\ change\ display\r\n\ @param\ word\ -\ the\ word\ meant\ to\ be\ added\r\n
 comment6.params=displayed\ typed
 comment6.target=boolean\ checkCorrect(java.lang.String,\ java.lang.String)
 comment6.text=\r\n\ @author\ Carl\r\n\ \r\n\ Checks\ if\ the\ displayed\ word\ matches\ with\ what\ the\ user\ has\ typed\r\n\ @param\ displayed\ -\ The\ word\ that\ is\ displayed\r\n\ @param\ typed\ -\ The\ word\ the\ user\ currently\ have\ typed\r\n\ @return\ -\ True\ if\ displayed\ word\ matches\ the\ currently\ typed\ word\r\n
